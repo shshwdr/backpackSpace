@@ -52,6 +52,8 @@ public class Bag
         item.gridPosition = anchorPos;
         return true;
     }
+    
+    
 
     /// <summary>
     /// 将物体从背包中移除
@@ -70,5 +72,19 @@ public class Bag
             }
         }
         item.gridPosition = new Vector2Int(-1, -1);
+    }
+    
+    public List<BagItem> GetItems()
+    {
+        List<BagItem> items = new List<BagItem>();
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                if (grid[x, y] != null && !items.Contains(grid[x, y]))
+                    items.Add (grid[x, y]);
+            }
+        }
+        return items;
     }
 }

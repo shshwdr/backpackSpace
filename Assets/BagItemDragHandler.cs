@@ -13,7 +13,7 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
     private BagItem bagItem;        // 当前物体的背包数据
 
     [Tooltip("每个背包格子的像素大小，应与 BackpackUI 中一致")]
-    public int cellSize = 50;
+    public int cellSize = 100;
 
     void Awake()
     {
@@ -22,8 +22,8 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
         parentCanvas = GetComponentInParent<Canvas>();
         bagItem = GetComponent<BagItem>();
 
-        bagManager = FindObjectOfType<BagManager>();
-        backpackUI = FindObjectOfType<BackpackUI>();
+        bagManager = BattleManager.Instance.playerBagManager;
+        backpackUI = bagManager.GetComponent<BackpackUI>();
         if (bagManager == null)
         {
             Debug.LogError("未找到 BagManager，请确保场景中存在！");
@@ -32,6 +32,9 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        
+        
+        
         originalPosition = rectTransform.anchoredPosition;
         canvasGroup.blocksRaycasts = false;
         // 开始拖拽时从背包中移除物品（如果已经放置过）
@@ -41,8 +44,6 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         
-        
-        BackpackUI backpackUI = FindObjectOfType<BackpackUI>();
         
         
         foreach (var slot in backpackUI.backpackPanel.GetComponentsInChildren<Image>())
@@ -146,7 +147,6 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
         // }
 
         // 同时重置背包预览格子的颜色
-        BackpackUI backpackUI = FindObjectOfType<BackpackUI>();
         // 尝试放置物品到背包中
         bool placed = bagManager.TryPlaceItem(bagItem, gridPos);
         if (placed)

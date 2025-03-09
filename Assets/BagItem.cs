@@ -12,4 +12,6 @@ public class BagItem : MonoBehaviour
 
     [HideInInspector]
     public Vector2Int gridPosition = new Vector2Int(-1, -1);
+    
+    public string identifier;
 }

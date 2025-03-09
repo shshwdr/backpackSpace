@@ -1,0 +1,34 @@
+{
+    "bagDataList": [
+        {
+            "wave": 0,
+            "items": [
+                {
+                    "identifier": "short",
+                    "posX": 1,
+                    "posY": 1
+                },
+                {
+                    "identifier": "tall",
+                    "posX": 2,
+                    "posY": 3
+                }
+            ]
+        },
+        {
+            "wave": 0,
+            "items": [
+                {
+                    "identifier": "short",
+                    "posX": 1,
+                    "posY": 4
+                },
+                {
+                    "identifier": "tall",
+                    "posX": 3,
+                    "posY": 1
+                }
+            ]
+        }
+    ]
+}

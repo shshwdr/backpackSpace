@@ -12,7 +12,7 @@ public class BagManager : MonoBehaviour
     [HideInInspector]
     public Bag bag;
 
-    void Awake()
+   public void Init()
     {
         bag = new Bag(bagWidth, bagHeight);
     }
