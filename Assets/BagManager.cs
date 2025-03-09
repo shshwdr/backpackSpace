@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -12,6 +13,11 @@ public class BagManager : MonoBehaviour
     [HideInInspector]
     public Bag bag;
 
+    public RectTransform mainItem;
+    
+    public List<BagItem> bagItems = new List<BagItem>();
+    public bool isFriendly;
+
    public void Init()
     {
         bag = new Bag(bagWidth, bagHeight);
@@ -25,6 +31,7 @@ public class BagManager : MonoBehaviour
         if (bag.PlaceItem(item, anchorPos))
         {
             Debug.Log("物体放置成功，位置：" + anchorPos);
+            bagItems.Add(item);
             return true;
         }
         else
@@ -40,5 +47,23 @@ public class BagManager : MonoBehaviour
     public Vector2Int GetItemPosition(BagItem item)
     {
         return item.gridPosition;
+    }
+    /// <summary>
+    /// 检查背包中是否有物体占据了给定的格子（考虑物体可能占用多个格子）
+    /// </summary>
+    public BagItem GetItemAtGridPosition(Vector2Int gridPos)
+    {
+        foreach (var item in bagItems)
+        {
+            // 遍历该物体占用的所有格子
+            foreach (var offset in item.shape)
+            {
+                if (item.gridPosition + offset == gridPos)
+                {
+                    return item;
+                }
+            }
+        }
+        return null;
     }
 }

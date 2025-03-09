@@ -14,4 +14,29 @@ public class BagItem : MonoBehaviour
     public Vector2Int gridPosition = new Vector2Int(-1, -1);
     
     public string identifier;
+    
+    public int maxHP = 50;
+    public int currentHP;
+
+    void Awake()
+    {
+        currentHP = maxHP;
+    }
+
+    public void TakeDamage(int dmg)
+    {
+        currentHP -= dmg;
+        Debug.Log(gameObject.name + " takes " + dmg + " damage. HP: " + currentHP);
+        if (currentHP <= 0)
+        {
+            RemoveFromBattlefield();
+        }
+    }
+
+    void RemoveFromBattlefield()
+    {
+        Debug.Log(gameObject.name + " is removed from battlefield.");
+        // 可以添加动画、特效、延时移除等效果
+        gameObject.SetActive(false);
+    }
 }
