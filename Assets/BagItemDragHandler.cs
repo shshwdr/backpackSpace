@@ -159,8 +159,14 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
             float posY = bagRect.rect.yMin + gridPos.y * cellSize;//+ cellSize * 0.5f;
             rectTransform.anchoredPosition = new Vector2(posX, posY);
             Image slotImage = backpackUI.GetSlotAt(gridPos);
+            var cellSizeTest = cellSize / 2;
             
-            rectTransform.position = slotImage.transform.position - new Vector3(cellSize * 0.5f, cellSize * 0.5f);
+#if UNITY_EDITOR
+#else
+                    cellSizeTest += 25;
+#endif
+            
+            rectTransform.position = slotImage.transform.position - new Vector3(cellSizeTest, cellSizeTest);
         }
         else
         {

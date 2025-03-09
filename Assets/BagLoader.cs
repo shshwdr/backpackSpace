@@ -85,8 +85,16 @@ public class BagLoader : MonoBehaviour
                 if (slotImage != null)
                 {
                     // 将物品的 worldPosition 调整到格子中心（再偏移半个 cellSize，使其对齐）
-                    itemRect.position = slotImage.transform.position - (Vector3)backpackUI. cellSize/2;
-                }
+                    var cellSize = backpackUI.cellSize.x / 2 ;
+                    #if UNITY_EDITOR
+                    #else
+                    cellSize += 25;
+                    #endif
+                    itemRect.position = slotImage.transform.position - new Vector3(cellSize, cellSize,0);
+                    
+                   }
+                
+                
             }
         
         }

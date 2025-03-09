@@ -48,10 +48,11 @@ public static class BagSaver
     /// </summary>
     public static BagDataList LoadBagDataList()
     {
-        if (File.Exists(filePath))
+        // 从 Resources 中加载 bagdata.json，对应路径为 "BagData/bagdata"（不带扩展名）
+        TextAsset textAsset = Resources.Load<TextAsset>("BagData/bagdata");
+        if (textAsset != null)
         {
-            string json = File.ReadAllText(filePath);
-            BagDataList dataList = JsonUtility.FromJson<BagDataList>(json);
+            BagDataList dataList = JsonUtility.FromJson<BagDataList>(textAsset.text);
             if (dataList == null)
             {
                 dataList = new BagDataList();
@@ -61,11 +62,13 @@ public static class BagSaver
         }
         else
         {
+            Debug.LogWarning("没有在 Resources/BagData 找到 bagdata.json 文件！");
             BagDataList dataList = new BagDataList();
             dataList.bagDataList = new List<BagData>();
             return dataList;
         }
     }
+
 
     /// <summary>
     /// 按波次分组加载数据
