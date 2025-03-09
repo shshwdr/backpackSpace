@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DrawCardsMenu : MenuBase
 {
-    
+    public Transform parent;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,15 @@ public class DrawCardsMenu : MenuBase
     public override void Show()
     {
         base.Show();
-        
+        foreach (Transform trans in parent)
+        {
+            Destroy(trans.gameObject);
+        }
+
+        foreach (var go in Resources.LoadAll<GameObject>("SpaceShip"))
+        {
+             GameObject newGo = Instantiate(go, parent);
+             newGo.AddComponent<BagItemDragHandler>();
+        }
     }
 }

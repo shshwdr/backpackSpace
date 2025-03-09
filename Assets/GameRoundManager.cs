@@ -61,8 +61,15 @@ public class GameRoundManager : Singleton<GameRoundManager>
             case StateType.draw:
                 BattleManager.Instance.StartBattle();
                 FindObjectOfType<DrawCardsMenu>().Hide();
+                currentState = StateType.battle;
                 break;
             case StateType.battle:
+                
+                currentState = StateType.draw;
+                FindObjectOfType<DrawCardsMenu>().Show();
+                
+                
+                BattleManager.Instance.LoadBagData();
                 break;
         }
     }

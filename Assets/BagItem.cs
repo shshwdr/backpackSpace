@@ -18,9 +18,13 @@ public class BagItem : MonoBehaviour
     public int maxHP = 50;
     public int currentHP;
 
+    private HPBar hpbar;
+    public bool isDead = false;
+
     void Awake()
     {
         currentHP = maxHP;
+        hpbar = GetComponentInChildren<HPBar>();
     }
 
     public void TakeDamage(int dmg)
@@ -31,6 +35,7 @@ public class BagItem : MonoBehaviour
         {
             RemoveFromBattlefield();
         }
+        hpbar.SetHP(currentHP,maxHP);
     }
 
     void RemoveFromBattlefield()
@@ -38,5 +43,14 @@ public class BagItem : MonoBehaviour
         Debug.Log(gameObject.name + " is removed from battlefield.");
         // 可以添加动画、特效、延时移除等效果
         gameObject.SetActive(false);
+        isDead = true;
+    }
+    
+    public void Reset()
+    {
+        isDead = false;
+        gameObject.SetActive(true);
+        currentHP = maxHP;
+        hpbar.SetHP(currentHP,maxHP);
     }
 }

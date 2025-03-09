@@ -14,6 +14,7 @@ public static class BagSaver
     /// </summary>
     public static void SaveBagData(BagData newData)
     {
+#if UNITY_EDITOR
         // 确保文件夹存在
         if (!Directory.Exists(folderPath))
         {
@@ -37,7 +38,6 @@ public static class BagSaver
         File.WriteAllText(filePath, json);
         Debug.Log("背包数据保存成功，路径：" + filePath);
         
-#if UNITY_EDITOR
         // 刷新编辑器中的资源数据
         UnityEditor.AssetDatabase.Refresh();
 #endif

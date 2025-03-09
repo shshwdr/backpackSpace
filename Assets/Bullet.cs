@@ -35,6 +35,10 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+        if (!BattleManager.Instance.isBattling)
+        {
+            return;
+        }
         // 移动子弹
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
 
@@ -74,7 +78,7 @@ public class Bullet : MonoBehaviour
 
             // 检查目标背包中是否有物体占用该格子
             BagItem hitItem = targetBagManager.GetItemAtGridPosition(gridPos);
-            if (hitItem != null)
+            if (hitItem != null && !hitItem.isDead)
             {
                 hitItem.TakeDamage(damage);
                 Destroy(gameObject);

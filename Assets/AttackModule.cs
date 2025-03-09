@@ -20,10 +20,18 @@ public class AttackModule : MonoBehaviour
             
         }
     }
-
+    
     void Update()
     {
-        timer += Time.deltaTime;
+        if (GameRoundManager.Instance.isBattling)
+        {
+            BattleUpdate(Time.deltaTime);
+        }
+    }
+
+    void BattleUpdate(float time)
+    {
+        timer += time;
         if (timer >= attackInterval)
         {
             timer = 0f;
@@ -34,7 +42,7 @@ public class AttackModule : MonoBehaviour
     void Fire()
     {
         // 从武器位置实例化子弹
-        GameObject bulletGO = Instantiate(bulletPrefab, transform.position, Quaternion.identity,transform.parent);
+        GameObject bulletGO = Instantiate(bulletPrefab, transform.position, Quaternion.identity,BattleManager.Instance.bulletParent);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         if (bullet != null)
         {

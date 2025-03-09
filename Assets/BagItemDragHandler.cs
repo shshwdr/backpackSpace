@@ -32,7 +32,10 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
+        if (GameRoundManager.Instance.isBattling)
+        {
+            return;
+        }
         
         
         originalPosition = rectTransform.anchoredPosition;
@@ -180,5 +183,7 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
                 slotImage.color = Color.white;
             }
         }
+
+        transform.parent = backpackUI.transform;
     }
 }
