@@ -91,5 +91,5 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1501133851784089967, guid: 135c942f318c94b4c99b5fd20a211b3a, type: 3}
   attackInterval: 1
   bulletSpeed: 300
-  bulletDamage: 10
+  bulletDamage: 1
   isFriendly: 1

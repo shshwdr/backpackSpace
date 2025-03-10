@@ -1,171 +1,21 @@
 {
     "bagDataList": [
         {
-            "wave": 0,
-            "items": [
-                {
-                    "identifier": "short",
-                    "posX": 1,
-                    "posY": 1
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 2,
-                    "posY": 3
-                }
-            ]
-        },
-        {
-            "wave": 0,
-            "items": [
-                {
-                    "identifier": "short",
-                    "posX": 1,
-                    "posY": 4
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 3,
-                    "posY": 1
-                }
-            ]
-        },
-        {
-            "wave": 0,
-            "items": [
-                {
-                    "identifier": "tallWeapon",
-                    "posX": 1,
-                    "posY": 1
-                },
-                {
-                    "identifier": "short",
-                    "posX": 1,
-                    "posY": 4
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 3,
-                    "posY": 3
-                }
-            ]
-        },
-        {
-            "wave": 0,
-            "items": [
-                {
-                    "identifier": "short",
-                    "posX": 1,
-                    "posY": 1
-                },
-                {
-                    "identifier": "tallWeapon",
-                    "posX": 1,
-                    "posY": 4
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 2,
-                    "posY": 1
-                }
-            ]
-        },
-        {
-            "wave": 0,
-            "items": [
-                {
-                    "identifier": "tallWeapon",
-                    "posX": 0,
-                    "posY": 4
-                },
-                {
-                    "identifier": "short",
-                    "posX": 1,
-                    "posY": 2
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 2,
-                    "posY": 3
-                }
-            ]
-        },
-        {
-            "wave": 0,
-            "items": [
-                {
-                    "identifier": "tallWeapon",
-                    "posX": 0,
-                    "posY": 1
-                },
-                {
-                    "identifier": "short",
-                    "posX": 2,
-                    "posY": 1
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 3,
-                    "posY": 1
-                }
-            ]
-        },
-        {
             "wave": 1,
             "items": [
                 {
-                    "identifier": "tallWeapon",
+                    "identifier": "earth",
                     "posX": 1,
                     "posY": 1
                 },
                 {
-                    "identifier": "short",
-                    "posX": 1,
+                    "identifier": "bear",
+                    "posX": 3,
                     "posY": 2
                 },
                 {
-                    "identifier": "tall",
-                    "posX": 2,
-                    "posY": 2
-                }
-            ]
-        },
-        {
-            "wave": 0,
-            "items": [
-                {
-                    "identifier": "tallWeapon",
-                    "posX": 1,
-                    "posY": 1
-                },
-                {
-                    "identifier": "short",
-                    "posX": 1,
-                    "posY": 3
-                },
-                {
-                    "identifier": "tall",
+                    "identifier": "drone",
                     "posX": 3,
-                    "posY": 1
-                }
-            ]
-        },
-        {
-            "wave": 0,
-            "items": [
-                {
-                    "identifier": "tallWeapon",
-                    "posX": 1,
-                    "posY": 4
-                },
-                {
-                    "identifier": "short",
-                    "posX": 3,
-                    "posY": 4
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 4,
                     "posY": 3
                 }
             ]
@@ -174,54 +24,19 @@
             "wave": 1,
             "items": [
                 {
-                    "identifier": "tallWeapon",
+                    "identifier": "heal",
                     "posX": 1,
-                    "posY": 4
-                },
-                {
-                    "identifier": "tallWeapon",
-                    "posX": 2,
-                    "posY": 1
-                },
-                {
-                    "identifier": "short",
-                    "posX": 3,
                     "posY": 2
                 },
                 {
-                    "identifier": "short",
+                    "identifier": "earth",
                     "posX": 3,
-                    "posY": 4
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 4,
                     "posY": 1
                 },
                 {
-                    "identifier": "tall",
-                    "posX": 4,
+                    "identifier": "drone",
+                    "posX": 3,
                     "posY": 3
-                }
-            ]
-        },
-        {
-            "wave": 0,
-            "items": [
-                {
-                    "identifier": "tallWeapon",
-                    "posX": 1,
-                    "posY": 1
-                },
-                {
-                    "identifier": "short",
-                    "posX": 3,
-                    "posY": 1
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 4,
-                    "posY": 1
                 }
             ]
         },
@@ -229,104 +44,19 @@
             "wave": 1,
             "items": [
                 {
-                    "identifier": "tallWeapon",
-                    "posX": 1,
-                    "posY": 1
-                },
-                {
-                    "identifier": "short",
-                    "posX": 1,
-                    "posY": 4
-                },
-                {
-                    "identifier": "tallWeapon",
-                    "posX": 2,
-                    "posY": 4
-                },
-                {
-                    "identifier": "short",
-                    "posX": 3,
-                    "posY": 1
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 4,
-                    "posY": 1
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 4,
-                    "posY": 3
-                }
-            ]
-        },
-        {
-            "wave": 2,
-            "items": [
-                {
-                    "identifier": "tall",
+                    "identifier": "heal",
                     "posX": 0,
-                    "posY": 3
+                    "posY": 2
                 },
                 {
-                    "identifier": "tallWeapon",
-                    "posX": 1,
-                    "posY": 1
-                },
-                {
-                    "identifier": "short",
-                    "posX": 1,
-                    "posY": 3
-                },
-                {
-                    "identifier": "short",
-                    "posX": 1,
-                    "posY": 4
-                },
-                {
-                    "identifier": "tallWeapon",
+                    "identifier": "bear",
                     "posX": 2,
                     "posY": 3
                 },
                 {
-                    "identifier": "tallWeapon",
-                    "posX": 2,
-                    "posY": 4
-                },
-                {
-                    "identifier": "short",
+                    "identifier": "earth",
                     "posX": 3,
-                    "posY": 1
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 4,
-                    "posY": 1
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 4,
-                    "posY": 3
-                }
-            ]
-        },
-        {
-            "wave": 0,
-            "items": [
-                {
-                    "identifier": "short",
-                    "posX": 0,
-                    "posY": 1
-                },
-                {
-                    "identifier": "tallWeapon",
-                    "posX": 2,
-                    "posY": 1
-                },
-                {
-                    "identifier": "tall",
-                    "posX": 4,
-                    "posY": 0
+                    "posY": 2
                 }
             ]
         }

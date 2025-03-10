@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DrawCardsMenu : MenuBase
@@ -25,10 +26,12 @@ public class DrawCardsMenu : MenuBase
             Destroy(trans.gameObject);
         }
 
-        foreach (var go in Resources.LoadAll<GameObject>("SpaceShip"))
+        var all = Resources.LoadAll<GameObject>("SpaceShip").ToList();
+        for(int i = 0;i<3;i++)
         {
-             GameObject newGo = Instantiate(go, parent);
+             GameObject newGo = Instantiate(all.PickItem(), parent);
              newGo.AddComponent<BagItemDragHandler>();
+             newGo.GetComponent<BagItem>().PlaceInShop();
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -18,6 +19,8 @@ public class GameRoundManager : Singleton<GameRoundManager>
 
     private int currentChapter = 2;
     
+    
+    
     public string CurrentChapterIdentifier =>currentArea  + "_" + currentChapter;
     public string CurrentWaveIdentifier =>  CurrentChapterIdentifier + "_" + currentWave;
 
@@ -27,16 +30,31 @@ public class GameRoundManager : Singleton<GameRoundManager>
     }
     public int CurrentArea=>currentArea;
 
-    private int currentArea = 1;
+    public int currentArea = 1;
 
     public int CurrentWave => currentWave;
     public int LastWave=> currentWave-1;
-    private int currentWave = 1;
+    public int currentWave = 1;
     
     public int TotalWaves;
     public int Gold => gold;
     private StateType currentState = StateType.start;
-    
+
+    public TMP_Text goldLabel;
+    public bool hasEnoughGold(int value)
+    {
+         return gold >= value;
+    }
+    public void AddGold(int value)
+    {
+        gold += value;
+        goldLabel.text = gold.ToString();
+    }
+    public void SpendGold(int value)
+    {
+        gold -= value;
+        goldLabel.text = gold.ToString();
+    }
 
     [HideInInspector]
     public float lastAnimTimer_test = 0;
@@ -55,6 +73,7 @@ public class GameRoundManager : Singleton<GameRoundManager>
         switch (currentState)
         {
             case StateType.start:
+                AddGold(10+currentWave);
                 currentState = StateType.draw;
                 FindObjectOfType<DrawCardsMenu>().Show();
                 break;

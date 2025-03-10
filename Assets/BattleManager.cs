@@ -20,7 +20,6 @@ public class BattleManager : Singleton<BattleManager>
     public RectTransform friendMainItemRect;
     [HideInInspector]
     public RectTransform enemyMainItemRect;
-    public int wave;
 
     public bool isBattling = false;
 
@@ -41,7 +40,7 @@ public class BattleManager : Singleton<BattleManager>
 
     public void LoadBagData()
     {
-        bagLoader.LoadRandomBagDataFromWave(wave);
+        bagLoader.LoadRandomBagDataFromWave(GameRoundManager.Instance.currentWave);
     }
     // Update is called once per frame
     void Update()
@@ -59,9 +58,12 @@ public class BattleManager : Singleton<BattleManager>
     {
         BagData currentBagData = new BagData()
         {
-            wave = wave,
+            wave = GameRoundManager.Instance.CurrentWave,
 
         };
+        
+        playerBagManager.StartBattle();
+        enemyBagManager.StartBattle();
         
         var itemsData = new  List<BagItemData>();
         foreach (var item in playerBag.GetItems())
@@ -139,8 +141,8 @@ public class BattleManager : Singleton<BattleManager>
     public void CLearBattle()
     {
         isBattling = false;
-        wave++;
-        waveText.text = "Wave: " + wave;
+        GameRoundManager.Instance.currentWave++;
+        waveText.text = "Wave: " + GameRoundManager.Instance.currentWave;
         // 清理战斗相关资源
         
         foreach (var item in playerBagManager.GetComponentsInChildren<BagItem>(true))

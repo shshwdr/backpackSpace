@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -15,20 +16,89 @@ public class BagItem : MonoBehaviour
     
     public string identifier;
     
-    public int maxHP = 50;
+    public int maxHP = 5;
     public int currentHP;
+    public int cost = 4;
 
     private HPBar hpbar;
     public bool isDead = false;
+    private BagManager bagManager;
+    public bool isOwned = true;
+    public GameObject costLabel;
 
     void Awake()
     {
         currentHP = maxHP;
         hpbar = GetComponentInChildren<HPBar>();
+        bagManager = GetComponentInParent<BagManager>();
+        if (bagManager == null)
+        {
+            bagManager = BattleManager.Instance.playerBagManager;
+        }
+        
     }
 
+    void UpdateCost()
+    {
+        costLabel.GetComponentInChildren<TMP_Text>().color = GameRoundManager.Instance.hasEnoughGold(cost) ? Color.white : Color.red;
+    }
+    public void PlaceInShop()
+    {
+        isOwned = false;
+        costLabel.SetActive(true);
+        costLabel.GetComponentInChildren<TMP_Text>().text = cost.ToString();
+        UpdateCost();
+    }
+
+    public void Purchase()
+    {
+        costLabel.SetActive(false);
+        
+        GameRoundManager.Instance.SpendGold(cost);
+    }
+    public bool hpNotFull()
+    {
+        return currentHP < maxHP;
+    }
+
+    public void Heal(int value)
+    {
+         if (value <= 0)
+         {
+             return;
+         }
+         //if (hpNotFull())
+         {
+             currentHP += value;
+             currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+             hpbar.SetHP(currentHP,maxHP);
+         }
+    }
     public void TakeDamage(int dmg)
     {
+        if (dmg <= 0)
+        {
+            return;
+        }
+        if (identifier != "bear")
+        {
+            foreach (var item in bagManager.bagItems)
+            {
+                if (!item.isDead && item.identifier == "bear")
+                {
+                    item.TakeDamage(1);
+                    dmg--;
+                    if (dmg <= 0)
+                    {
+                        break;
+                    }
+                }
+            }
+
+        }
+        
+        
+        
         currentHP -= dmg;
         Debug.Log(gameObject.name + " takes " + dmg + " damage. HP: " + currentHP);
         if (currentHP <= 0)
@@ -44,6 +114,10 @@ public class BagItem : MonoBehaviour
         // 可以添加动画、特效、延时移除等效果
         gameObject.SetActive(false);
         isDead = true;
+        if (bagManager.aliveBagItems.Contains(this))
+        {
+            bagManager.aliveBagItems.Remove(this);
+        }
     }
     
     public void Reset()

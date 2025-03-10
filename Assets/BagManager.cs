@@ -17,8 +17,14 @@ public class BagManager : MonoBehaviour
     
     public List<BagItem> bagItems = new List<BagItem>();
     public bool isFriendly;
-    
 
+
+    public List<BagItem> aliveBagItems;
+
+    public void StartBattle()
+    {
+        aliveBagItems = bagItems;
+    }
    public void Init()
     {
         bag = new Bag(bagWidth, bagHeight);

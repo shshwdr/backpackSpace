@@ -30,14 +30,20 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
         }
     }
 
+    private bool beginDrag = false;
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (GameRoundManager.Instance.isBattling)
         {
             return;
         }
-        
-        
+
+        if (!GameRoundManager.Instance.hasEnoughGold(bagItem.cost))
+        {
+            return;
+        }
+
+        beginDrag = true;
         originalPosition = rectTransform.anchoredPosition;
         canvasGroup.blocksRaycasts = false;
         // 开始拖拽时从背包中移除物品（如果已经放置过）
@@ -46,8 +52,11 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        
-        
+
+        if (!beginDrag)
+        {
+            return;
+        }
         
         foreach (var slot in backpackUI.backpackPanel.GetComponentsInChildren<Image>())
         {
@@ -128,6 +137,14 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        
+        
+        
+        if (!beginDrag)
+        {
+            return;
+        }
+        beginDrag = false;
         canvasGroup.blocksRaycasts = true;
 
         // 将屏幕点击位置转换为背包面板内的局部坐标
@@ -160,7 +177,7 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
             rectTransform.anchoredPosition = new Vector2(posX, posY);
             Image slotImage = backpackUI.GetSlotAt(gridPos);
             var cellSizeTest = cellSize / 2;
-            
+            bagItem.Purchase();
 #if UNITY_EDITOR
 #else
                     cellSizeTest += 25;

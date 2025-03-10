@@ -7,7 +7,7 @@ public class AttackModule : MonoBehaviour
     public GameObject bulletPrefab;
     public float attackInterval = 1f;
     public float bulletSpeed = 5f;
-    public int bulletDamage = 10;
+    public int bulletDamage = 1;
     public bool isFriendly = true; // 我方为 true，敌方为 false
 
     private float timer;

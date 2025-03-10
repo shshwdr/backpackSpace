@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private Dictionary<int, List<BagData>> groupedData;
+    
+    
     // Start is called before the first frame update
     void Awake()
     {
