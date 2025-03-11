@@ -176,7 +176,7 @@ MonoBehaviour:
   cost: 4
   isDead: 0
   isOwned: 1
-  costLabel: {fileID: 1839530872981601180}
+  costLabel: {fileID: 7460555620515685791}
 --- !u!225 &8101720917419362370
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7640713726998383721
 RectTransform:
   m_ObjectHideFlags: 0
@@ -512,11 +512,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e808ca9ed13d28b4caafbc0564dcea16, type: 3}
---- !u!1 &1839530872981601180 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2672113920282354569, guid: e808ca9ed13d28b4caafbc0564dcea16, type: 3}
-  m_PrefabInstance: {fileID: 4364571771494520853}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6152929048860075491 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7634035366682197494, guid: e808ca9ed13d28b4caafbc0564dcea16, type: 3}

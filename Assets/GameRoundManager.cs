@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pool;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -49,11 +50,13 @@ public class GameRoundManager : Singleton<GameRoundManager>
     {
         gold += value;
         goldLabel.text = gold.ToString();
+        EventPool.Trigger("updateGold");
     }
     public void SpendGold(int value)
     {
         gold -= value;
         goldLabel.text = gold.ToString();
+        EventPool.Trigger("updateGold");
     }
 
     [HideInInspector]
@@ -84,6 +87,7 @@ public class GameRoundManager : Singleton<GameRoundManager>
                 break;
             case StateType.battle:
                 
+                AddGold(10+currentWave);
                 currentState = StateType.draw;
                 FindObjectOfType<DrawCardsMenu>().Show();
                 

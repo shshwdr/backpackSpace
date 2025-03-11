@@ -47,6 +47,21 @@ public class BagManager : MonoBehaviour
             return false;
         }
     }
+    
+    public void TryRemoveItem(BagItem item)
+    {
+        bag.RemoveItem(item);
+        {
+            Debug.Log("物体移除成功");
+            bagItems.Remove(item);
+           // return true;
+        }
+        // else
+        // {
+        //     Debug.Log("物体移除失败");
+        //     return false;
+        // }
+    }
 
     /// <summary>
     /// 获取物体在背包中的锚点位置

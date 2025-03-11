@@ -6,6 +6,8 @@ using UnityEngine;
 public class DrawCardsMenu : MenuBase
 {
     public Transform parent;
+    
+    public RectTransform discardArea;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +29,15 @@ public class DrawCardsMenu : MenuBase
         }
 
         var all = Resources.LoadAll<GameObject>("SpaceShip").ToList();
-        for(int i = 0;i<3;i++)
+        for(int i = 0;i<4;i++)
         {
              GameObject newGo = Instantiate(all.PickItem(), parent);
              newGo.AddComponent<BagItemDragHandler>();
              newGo.GetComponent<BagItem>().PlaceInShop();
         }
+        
+        
+        discardArea.gameObject.SetActive(false);
     }
+
 }

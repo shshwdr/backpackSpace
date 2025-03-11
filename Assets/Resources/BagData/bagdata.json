@@ -59,6 +59,21 @@
                     "posY": 2
                 }
             ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 2
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 3
+                }
+            ]
         }
     ]
 }

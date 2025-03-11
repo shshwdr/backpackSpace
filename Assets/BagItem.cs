@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Pool;
 using TMPro;
 using UnityEngine;
 
@@ -35,10 +36,10 @@ public class BagItem : MonoBehaviour
         {
             bagManager = BattleManager.Instance.playerBagManager;
         }
-        
+        EventPool.OptIn("updateGold", UpdateGold);
     }
 
-    void UpdateCost()
+    void UpdateGold()
     {
         costLabel.GetComponentInChildren<TMP_Text>().color = GameRoundManager.Instance.hasEnoughGold(cost) ? Color.white : Color.red;
     }
@@ -47,14 +48,29 @@ public class BagItem : MonoBehaviour
         isOwned = false;
         costLabel.SetActive(true);
         costLabel.GetComponentInChildren<TMP_Text>().text = cost.ToString();
-        UpdateCost();
+        UpdateGold();
+    }
+
+    public void Sell()
+    {
+        if (!isOwned)
+        {
+            return;
+        }
+        GameRoundManager.Instance.AddGold(cost/2);
     }
 
     public void Purchase()
     {
+        if (isOwned)
+        {
+            return;
+        }
+        
         costLabel.SetActive(false);
         
         GameRoundManager.Instance.SpendGold(cost);
+        isOwned = true;
     }
     public bool hpNotFull()
     {
