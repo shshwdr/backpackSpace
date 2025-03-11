@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler,IPointerEnterHandler,IPointerExitHandler
 {
     private Vector2 originalPosition;
     private RectTransform rectTransform;
@@ -12,7 +12,7 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
     private BagManager bagManager;  // 背包管理器引用
     private BackpackUI backpackUI;
     private BagItem bagItem;        // 当前物体的背包数据
-    
+    private GameObject detailObj;
     
     RectTransform discardArea;
 
@@ -33,7 +33,9 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
             Debug.LogError("未找到 BagManager，请确保场景中存在！");
         }
         discardArea = FindObjectOfType<DrawCardsMenu>(true).discardArea;
+        detailObj = FindObjectOfType<DrawCardsMenu>(true).detailObj;
     }
+
 
     private bool beginDrag = false;
     public void OnBeginDrag(PointerEventData eventData)
@@ -256,5 +258,16 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
         
         discardArea.gameObject.SetActive(false);
 
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        detailObj.SetActive(true);
+        detailObj.GetComponent<DetailMenu>().Show(bagItem);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        detailObj.SetActive(false);
     }
 }

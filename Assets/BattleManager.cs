@@ -132,6 +132,7 @@ public class BattleManager : Singleton<BattleManager>
         else
         {
             winLoseCanvas.GetComponentInChildren<TMP_Text>().text = "Lose!";
+            GameRoundManager.Instance.ReduceHP();
             //GameRoundManager.Instance.GameLose();
         }
         // 清理战斗相关资源
@@ -142,7 +143,14 @@ public class BattleManager : Singleton<BattleManager>
     {
         isBattling = false;
         GameRoundManager.Instance.currentWave++;
-        waveText.text = "Wave: " + GameRoundManager.Instance.currentWave;
+        if (GameRoundManager.Instance.currentWave > GameRoundManager.Instance.maxWave)
+        {
+            
+        }
+        else
+        {
+            waveText.text = "Wave: " + GameRoundManager.Instance.currentWave+"/"+GameRoundManager.Instance.maxWave;
+        }
         // 清理战斗相关资源
         
         foreach (var item in playerBagManager.GetComponentsInChildren<BagItem>(true))

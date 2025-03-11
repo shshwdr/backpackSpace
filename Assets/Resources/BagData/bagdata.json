@@ -74,6 +74,46 @@
                     "posY": 3
                 }
             ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 3
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 3
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 2
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 3
+                }
+            ]
         }
     ]
 }

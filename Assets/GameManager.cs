@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     private Dictionary<int, List<BagData>> groupedData;
     
@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         groupedData = BagSaver.LoadBagDataGroupedByWave();
+        CSVLoader.Instance.Init();
         BattleManager.Instance.Init();
         StartCoroutine(test());
     }
@@ -30,7 +31,12 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Restart();
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

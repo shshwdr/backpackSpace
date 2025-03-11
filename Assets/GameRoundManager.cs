@@ -14,12 +14,15 @@ public class GameRoundManager : Singleton<GameRoundManager>
         battle,
     };
 
+    public int maxHP = 3;
+    private int currentHP = 3;
     public bool isBattling => currentState == StateType.battle;
     private int gold;
     public int CurrentChapter=>currentChapter;
 
     private int currentChapter = 2;
-    
+
+    public int maxWave = 2;
     
     
     public string CurrentChapterIdentifier =>currentArea  + "_" + currentChapter;
@@ -36,6 +39,8 @@ public class GameRoundManager : Singleton<GameRoundManager>
     public int CurrentWave => currentWave;
     public int LastWave=> currentWave-1;
     public int currentWave = 1;
+
+    public Transform hpParent;
     
     public int TotalWaves;
     public int Gold => gold;
@@ -64,19 +69,59 @@ public class GameRoundManager : Singleton<GameRoundManager>
 
     public void Init()
     {
+        currentHP = maxHP;
+        UpdateHP();
+        
+        
+        BattleManager.Instance.waveText.text = "Wave: " + GameRoundManager.Instance.currentWave+"/"+GameRoundManager.Instance.maxWave;
         Next();
     }
 
+    public void UpdateHP()
+    {
+        for (int i = 0; i < maxHP; i++)
+        {
+            if (i >= currentHP)
+            {
+                hpParent.GetChild(i).gameObject.SetActive(false);
+            }
+            else
+            {
+                hpParent.GetChild(i).gameObject.SetActive(true);
+            }
+        }
+    }
+
+    public void ReduceHP()
+    {
+        currentHP--;
+        UpdateHP();
+
+        if (currentHP <= 0)
+        {
+            GameLose();
+        }
+    }
     public bool shouldShowTutorial()
     {
         return CurrentChapter == 1 && currentWave == 1;
     }
     public void Next()
     {
+        if (isFinished)
+        {
+            return;
+        }
+
+        if (currentWave > maxWave)
+        {
+            GameWin();
+            return;
+        }
         switch (currentState)
         {
             case StateType.start:
-                AddGold(10+currentWave);
+                AddGold(15+currentWave);
                 currentState = StateType.draw;
                 FindObjectOfType<DrawCardsMenu>().Show();
                 break;
@@ -87,7 +132,7 @@ public class GameRoundManager : Singleton<GameRoundManager>
                 break;
             case StateType.battle:
                 
-                AddGold(10+currentWave);
+                AddGold(15+currentWave);
                 currentState = StateType.draw;
                 FindObjectOfType<DrawCardsMenu>().Show();
                 
@@ -108,14 +153,18 @@ public class GameRoundManager : Singleton<GameRoundManager>
         
     }
 
+    public bool isFinished = false;
     public void GameLose()
     {
-        
+        isFinished = true;
 
+        FindObjectOfType<WinLoseMenu>() .ShowLose();
     }
 
     public void GameWin()
     {
+        isFinished = true;
 
+        FindObjectOfType<WinLoseMenu>() .ShowWin();
     }
 }

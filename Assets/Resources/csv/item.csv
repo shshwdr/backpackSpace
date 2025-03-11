@@ -1,0 +1,6 @@
+﻿identifier,hp,desc,name
+bear,,"For each damage received by allied units, Water Bear absorbs 1 point.",Water Bear
+drone,,Basic attack unit.,Drone
+earth,,"When destroyed, spawn some spaceship",Wandering Earth
+heal,,Heal random ally 1 hp.,Heal
+ship,,Basic damage unit.,SpaceShip

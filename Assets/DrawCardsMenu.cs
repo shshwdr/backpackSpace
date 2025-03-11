@@ -8,6 +8,8 @@ public class DrawCardsMenu : MenuBase
     public Transform parent;
     
     public RectTransform discardArea;
+
+    public GameObject detailObj;
     // Start is called before the first frame update
     void Start()
     {
