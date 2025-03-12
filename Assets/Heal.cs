@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Heal : MonoBehaviour
 {
-    public float attackInterval = 1.5f;
-    public int bulletDamage = 1;
 
     private float timer;
     BagManager bagManager;
 
+    private BagItem bagitem;
+    ItemInfo itemInfo;
     private void Awake()
     {
         bagManager = GetComponentInParent<BagManager>();
@@ -18,6 +18,8 @@ public class Heal : MonoBehaviour
         {
             bagManager = BattleManager.Instance.playerBagManager;
         }
+        bagitem = GetComponentInParent<BagItem>();
+        itemInfo  =  CSVLoader.Instance.ItemInfoDict[bagitem.identifier];
     }
 
     // Start is called before the first frame update
@@ -32,7 +34,7 @@ public class Heal : MonoBehaviour
     void BattleUpdate(float time)
     {
         timer += time;
-        if (timer >= attackInterval)
+        if (timer >= itemInfo.cooldown)
         {
             timer = 0f;
             var candidates = new List<BagItem>();
@@ -46,7 +48,7 @@ public class Heal : MonoBehaviour
             if (candidates.Count > 0)
             {
                 var target = candidates.RandomItem();
-                target.Heal(bulletDamage);
+                target.Heal(itemInfo.hit);
             }
 
             

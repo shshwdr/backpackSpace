@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PiercingAttack : ActionBase
+{
+   protected override void Fire()
+   {
+      base.Fire();
+      var enemyBagManager = BattleManager.Instance.getEnemyBagManager(bagManager);
+      var hit = false;
+      HashSet<BagItem> hitItems = new HashSet<BagItem>();
+      for (int i = 0; i < 5; i++)
+      {
+         var gridPos = new Vector2Int(i, bagitem.gridPosition.y);
+         BagItem hitItem = enemyBagManager.GetItemAtGridPosition(gridPos);
+         if (hitItem != null && !hitItem.isDead)
+         {
+            if (hitItems.Contains(hitItem))
+               continue;
+            hitItems.Add(hitItem);
+            hitItem.TakeDamage( itemInfo.hit);
+            hit = true;
+         }
+      }
+
+      if (!hit)
+      {
+         BattleManager.Instance.ApplyDamageToMainItem(enemyBagManager, itemInfo.hit);
+      }
+      
+   }
+}

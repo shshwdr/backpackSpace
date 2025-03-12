@@ -27,6 +27,10 @@ public class BagItem : MonoBehaviour
     public bool isOwned = true;
     public GameObject costLabel;
 
+    public bool isGenerated = false;
+    
+    
+
     void Awake()
     {
         currentHP = maxHP;
@@ -58,7 +62,9 @@ public class BagItem : MonoBehaviour
             return;
         }
         GameRoundManager.Instance.AddGold(cost/2);
+        GameRoundManager.Instance.DoTrade();
     }
+
 
     public void Purchase()
     {
@@ -71,6 +77,8 @@ public class BagItem : MonoBehaviour
         
         GameRoundManager.Instance.SpendGold(cost);
         isOwned = true;
+        
+        GameRoundManager.Instance.DoTrade();
     }
     public bool hpNotFull()
     {
@@ -119,9 +127,33 @@ public class BagItem : MonoBehaviour
         Debug.Log(gameObject.name + " takes " + dmg + " damage. HP: " + currentHP);
         if (currentHP <= 0)
         {
-            RemoveFromBattlefield();
+            die();
         }
         hpbar.SetHP(currentHP,maxHP);
+    }
+
+    void die()
+    {
+        bagManager.deadCount++;
+        
+        if (GetComponent<DeadActionBase>())
+        {
+            GetComponent<DeadActionBase>().DeadAction();
+        }
+            
+        RemoveFromBattlefield();
+
+        if (bagManager == BattleManager.Instance.enemyBagManager)
+        {
+            //var walleCount = 0;
+            foreach (var item in BattleManager.Instance.playerBagManager.bagItems)
+            {
+                if (item.identifier == "collect")
+                {
+                    GameRoundManager.Instance.AddGold(1);
+                }
+            }
+        }
     }
 
     void RemoveFromBattlefield()

@@ -24,6 +24,23 @@ public class BattleManager : Singleton<BattleManager>
     public bool isBattling = false;
 
     public TMP_Text waveText;
+
+
+    public void ApplyDamageToMainItem(BagManager bagManager,int dmg)
+    {
+        if (bagManager == playerBagManager)
+        {
+            ApplyDamageToFriendly(dmg);
+        }
+        else
+        {
+            ApplyDamageToEnemy(dmg);
+        }
+    }
+    public BagManager getEnemyBagManager(BagManager bagManager)
+    {
+        return bagManager == playerBagManager ? enemyBagManager : playerBagManager;
+    }
     // Start is called before the first frame update
     public void Init()
     {
@@ -155,7 +172,14 @@ public class BattleManager : Singleton<BattleManager>
         
         foreach (var item in playerBagManager.GetComponentsInChildren<BagItem>(true))
         {
-            item.Reset();
+            if (item.isGenerated)
+            {
+                Destroy(item.gameObject);
+            }
+            else
+            {
+                item.Reset();
+            }
         }
         foreach (var item in enemyBagManager.GetComponentsInChildren<BagItem>(true))
         {

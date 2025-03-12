@@ -17,13 +17,14 @@ public class BagManager : MonoBehaviour
     
     public List<BagItem> bagItems = new List<BagItem>();
     public bool isFriendly;
-
+    public int deadCount = 0;
 
     public List<BagItem> aliveBagItems;
 
     public void StartBattle()
     {
         aliveBagItems = bagItems;
+        deadCount = 0;
     }
    public void Init()
     {

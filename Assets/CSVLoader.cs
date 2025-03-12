@@ -10,6 +10,11 @@ public class ItemInfo
     public int hp;
     public string desc;
     public string name;
+    public string story;
+    public int cost;
+    public int hit;
+    public float cooldown;
+
 
 }
 public class CSVLoader : Singleton<CSVLoader>

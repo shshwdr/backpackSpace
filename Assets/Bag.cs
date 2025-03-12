@@ -54,6 +54,7 @@ public class Bag
     }
     
     
+    
 
     /// <summary>
     /// 将物体从背包中移除

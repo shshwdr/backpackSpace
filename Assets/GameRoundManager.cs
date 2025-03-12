@@ -57,6 +57,18 @@ public class GameRoundManager : Singleton<GameRoundManager>
         goldLabel.text = gold.ToString();
         EventPool.Trigger("updateGold");
     }
+
+    public void DoTrade()
+    {
+        foreach (var item in BattleManager.Instance.playerBagManager.bagItems)
+        {
+            if (item.identifier == "trade")
+            {
+                GameRoundManager.Instance.AddGold(1);
+            }
+        }
+    }
+    
     public void SpendGold(int value)
     {
         gold -= value;

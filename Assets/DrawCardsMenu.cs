@@ -15,6 +15,13 @@ public class DrawCardsMenu : MenuBase
     {
         
     }
+    
+    
+    public void Refresh()
+    {
+        GameRoundManager.Instance.SpendGold(2);
+        GameRoundManager.Instance.DoTrade();
+    }
 
     // Update is called once per frame
     void Update()
