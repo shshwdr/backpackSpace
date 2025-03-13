@@ -1,13 +1,13 @@
 ﻿identifier,hp,hit,cooldown,cost,desc,name,story,functionFinished,artFinished,allfinished,tested
-bear,20,0,1,10,"For each damage received by allied units, Water Bear absorbs 1 point. No damage.",Water Bear,,,Tardigress,,
-drone,10,1,1.2,4,Do Piercing damage {0} every {1} second.Can only reach main ship when no unit in front of it,Borg Cube,,1,Skyhopper,1,
-earth,30,2,1,15,"When destroyed, spawn some spaceship.Damage {0} every {1} second.",Wandering Earth,"The Wandering Home is an extension of the Canis Majorion’s home planet. It was built during a planetorial crisis that threatened the existence of the friendly dog alien's home planet. This enormous ship has its very own ecosystem built within that can sustain its inhabitants for millennia to come. Equipped with extra spaceships within, this spacecraft aims to maximize the chance of survival of any inhabitants on board. ",1,Emerald Rounder,1,
-heal,10,1,0.8,4,Heal random ally {0} hp every {1} second.,Skutters,,1,Skitter,1,
+bear,20,1,1.3,10,Damage first item infont of it {0} every {1} second and disable its attack,Water Bear,,,Tardigress,,
+drone,10,1,1.2,4,Do Piercing damage {0} every {1} second.Can only reach main ship when no unit in front of it,Borg Cube,,1,Skyhopper,1,1
+earth,5,2,1,12,"When destroyed, spawn some spaceship.Damage {0} every {1} second.",Wandering Earth,"The Wandering Home is an extension of the Canis Majorion’s home planet. It was built during a planetorial crisis that threatened the existence of the friendly dog alien's home planet. This enormous ship has its very own ecosystem built within that can sustain its inhabitants for millennia to come. Equipped with extra spaceships within, this spacecraft aims to maximize the chance of survival of any inhabitants on board. ",1,Emerald Rounder,1,
+heal,10,1,0.8,4,Heal random ally {0} hp every {1} second.,Skutters,,1,Skitter,1,1
 ship,10,1,1,3,Damage first item infont of it {0} every {1} second.,SpaceShip,,1,ship,,1
 tardis,15,2,1.5,7,Randomly move enemy's position and do damage {0} every {1} second,Tardis,,,tardis,,
-collect,10,0,1,15,Get 1 coin for each enemy the team destroyed.  No damage.,WALL-E,,1,,,
-trade,10,1,1,10,"When you buy, sell, refresh, get 1 coin. Damage first item infont of it {0} every {1} second.",#^$$$^??_(`￥,"The #^$$$^??_(`￥ is a mysterious vessel occupied by the nicknamed Blorbo race. No one within this galaxy is quite capable of pronouncing the original name of this species. They seem to be a travelling merchant species that communicate through drawings. Hence,  #^$$$^??_(`￥always prefer trase than fight. But it doesn't mean that it's incapable if the situation calls for a fight. ",1,#^$$$^__’¥,,1
-revenge,5,1,1,8,Damage first item infont of it {0} every {1} second. Damage+1 for each ally get destroyed. ,Battle Avenger,,1,Hermit Crab-Class Explorer,,1
-target,10,2,1,8,Target the one with lowest hp and damage {0} every {1} second.,Culture Drone,,,DRILL- SR158,,
+collect,10,0,1,10,Get 1 coin for each enemy the team destroyed.  No damage.,WALL-E,,1,,0,
+trade,10,1,1.1,10,"When you buy, sell, refresh, get 1 coin. Damage first item infont of it {0} every {1} second.",#^$$$^??_(`￥,"The #^$$$^??_(`￥ is a mysterious vessel occupied by the nicknamed Blorbo race. No one within this galaxy is quite capable of pronouncing the original name of this species. They seem to be a travelling merchant species that communicate through drawings. Hence,  #^$$$^??_(`￥always prefer trase than fight. But it doesn't mean that it's incapable if the situation calls for a fight. ",1,#^$$$^__’¥,0,
+revenge,5,1,1.4,8,Damage first item infont of it {0} every {1} second. Damage+1 for each ally get destroyed. ,Battle Avenger,,1,Hermit Crab-Class Explorer,,
+target,10,2,2,8,Target the one with lowest hp and damage {0} every {1} second.,Culture Drone,,,DRILL- SR158,,
 defender,20,0,1,10,"For each damage received by allied units, Water Bear absorbs 1 point. No damage.",The Steel Defender,,,The Steel Defender,,
 buff,10,0,2,6,Any ship bettwen two ,Energy Sphere,,,Energy Sphere,,

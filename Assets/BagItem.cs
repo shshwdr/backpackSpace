@@ -1,13 +1,16 @@
 using System.Collections.Generic;
 using Pool;
 using TMPro;
+using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 /// <summary>
 /// 背包中的物体，定义了该物体在背包中占用的格子。
 /// 例如，shape 中可以定义 [(0,0), (1,0), (0,1)] 表示物体占用一个 L 形区域（锚点为左上角或其他约定位置）。
 /// </summary>
-public class BagItem : MonoBehaviour
+public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 {
     [Tooltip("物体在背包中占用的格子偏移，相对于锚点 (0,0)")]
     public List<Vector2Int> shape = new List<Vector2Int>();
@@ -21,6 +24,7 @@ public class BagItem : MonoBehaviour
     public int currentHP;
     public int cost = 4;
 
+    private GameObject detailObj;
     private HPBar hpbar;
     public bool isDead = false;
     private BagManager bagManager;
@@ -31,18 +35,44 @@ public class BagItem : MonoBehaviour
 
     private ItemInfo info;
 
+    public Image flipImage;
+
     void Awake()
     {
         info = CSVLoader.Instance.ItemInfoDict[identifier];
         maxHP = info.hp;
         currentHP = maxHP;
+        cost = info.cost;
         hpbar = GetComponentInChildren<HPBar>();
+        hpbar.SetHP(currentHP, maxHP);
         bagManager = GetComponentInParent<BagManager>();
         if (bagManager == null)
         {
             bagManager = BattleManager.Instance.playerBagManager;
         }
+        
         EventPool.OptIn("updateGold", UpdateGold);
+
+
+
+        if (!bagManager.isFriendly)
+        {
+            //flip
+            if (flipImage)
+            {
+                GetComponentInChildren<Image>().gameObject.SetActive(false);
+                flipImage.gameObject.SetActive(true);
+            }
+            else
+            {
+                var scale = GetComponentInChildren<Image>().transform.localScale;
+                scale.x = -scale.x;
+                GetComponentInChildren<Image>().transform.localScale = scale;
+            }
+
+        }
+        
+        detailObj = FindObjectOfType<DrawCardsMenu>(true).detailObj;
     }
 
     void UpdateGold()
@@ -55,6 +85,18 @@ public class BagItem : MonoBehaviour
         costLabel.SetActive(true);
         costLabel.GetComponentInChildren<TMP_Text>().text = cost.ToString();
         UpdateGold();
+    }
+    
+    
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        detailObj.SetActive(true);
+        detailObj.GetComponent<DetailMenu>().Show(this);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        detailObj.SetActive(false);
     }
 
     public void Sell()
@@ -106,11 +148,11 @@ public class BagItem : MonoBehaviour
         {
             return;
         }
-        if (identifier != "bear")
+        if (identifier != "defender")
         {
             foreach (var item in bagManager.bagItems)
             {
-                if (!item.isDead && item.identifier == "bear")
+                if (!item.isDead && item.identifier == "defender")
                 {
                     item.TakeDamage(1);
                     dmg--;

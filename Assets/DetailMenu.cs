@@ -15,7 +15,8 @@ public class DetailMenu : Singleton<DetailMenu>
     public void Show(BagItem item)
     {
         var itemInfo = CSVLoader.Instance.ItemInfoDict[item.identifier];
-        label.text = itemInfo.name + "\n" + "HP: " + itemInfo.hp+
+        label.text = itemInfo.name + 
+                     //"\n" + "HP: " + itemInfo.hp+
                      "\n" + string.Format( itemInfo.desc, itemInfo.hit, itemInfo.cooldown);
     }
 }

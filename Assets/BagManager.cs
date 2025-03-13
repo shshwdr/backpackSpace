@@ -34,9 +34,9 @@ public class BagManager : MonoBehaviour
     /// <summary>
     /// 尝试将物体放入背包中，anchorPos 为物体在背包中锚点的位置（格子坐标）。
     /// </summary>
-    public bool TryPlaceItem(BagItem item, Vector2Int anchorPos)
+    public bool TryPlaceItem(BagItem item, Vector2Int anchorPos, bool isFlipped)
     {
-        if (bag.PlaceItem(item, anchorPos))
+        if (bag.PlaceItem(item, anchorPos,isFlipped))
         {
             Debug.Log("物体放置成功，位置：" + anchorPos);
             bagItems.Add(item);
@@ -76,7 +76,7 @@ public class BagManager : MonoBehaviour
     /// </summary>
     public BagItem GetItemAtGridPosition(Vector2Int gridPos)
     {
-        foreach (var item in bagItems)
+        foreach (var item in aliveBagItems)
         {
             // 遍历该物体占用的所有格子
             foreach (var offset in item.shape)

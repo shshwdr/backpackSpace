@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler,IPointerEnterHandler,IPointerExitHandler
+public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private Vector2 originalPosition;
     private RectTransform rectTransform;
@@ -12,9 +12,10 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
     private BagManager bagManager;  // 背包管理器引用
     private BackpackUI backpackUI;
     private BagItem bagItem;        // 当前物体的背包数据
-    private GameObject detailObj;
     
     RectTransform discardArea;
+
+    private Transform parent;
 
     [Tooltip("每个背包格子的像素大小，应与 BackpackUI 中一致")]
     public int cellSize = 100;
@@ -33,7 +34,6 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
             Debug.LogError("未找到 BagManager，请确保场景中存在！");
         }
         discardArea = FindObjectOfType<DrawCardsMenu>(true).discardArea;
-        detailObj = FindObjectOfType<DrawCardsMenu>(true).detailObj;
     }
 
 
@@ -50,6 +50,7 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
             return;
         }
 
+        parent = transform.parent;
         beginDrag = true;
         originalPosition = rectTransform.anchoredPosition;
         canvasGroup.blocksRaycasts = false;
@@ -200,7 +201,7 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
         //     return;
         // }
 
-        if (IsPointerOverTarget(eventData))
+        if (bagItem.isOwned && IsPointerOverTarget(eventData))
         {
             bagItem.Sell();
         }
@@ -209,7 +210,7 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
             
         // 同时重置背包预览格子的颜色
         // 尝试放置物品到背包中
-        bool placed = bagManager.TryPlaceItem(bagItem, gridPos);
+        bool placed = bagManager.TryPlaceItem(bagItem, gridPos,false);
         if (placed)
         {
             // 计算格子中心位置
@@ -229,12 +230,14 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
                     cellSizeTest += 25;
 #endif
             
+            transform.parent = backpackUI.transform;
             rectTransform.position = slotImage.transform.position - new Vector3(cellSizeTest, cellSizeTest);
         }
         else
         {
             // 放置失败还原
             rectTransform.anchoredPosition = originalPosition;
+            transform.parent = parent;
         }
 
         // 重置自身颜色
@@ -254,20 +257,9 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
             }
         }
 
-        transform.parent = backpackUI.transform;
         
         discardArea.gameObject.SetActive(false);
 
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        detailObj.SetActive(true);
-        detailObj.GetComponent<DetailMenu>().Show(bagItem);
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        detailObj.SetActive(false);
-    }
 }

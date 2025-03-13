@@ -24,7 +24,7 @@ public class AttackModule : ActionBase
                 value += bagManager.deadCount;
             }
 
-        bullet.Initialize(dir, bulletSpeed, value , isFriendly);
+        bullet.Initialize(dir, bulletSpeed, value , isFriendly,itemInfo);
         }
     }
 }

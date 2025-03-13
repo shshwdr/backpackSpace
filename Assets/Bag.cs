@@ -40,13 +40,18 @@ public class Bag
     /// <summary>
     /// 尝试将物体放置到背包中，放置成功返回 true，否则返回 false
     /// </summary>
-    public bool PlaceItem(BagItem item, Vector2Int anchorPos)
+    public bool PlaceItem(BagItem item, Vector2Int anchorPos,bool isFlipped)
     {
         if (!CanPlaceItem(item, anchorPos))
             return false;
         foreach (Vector2Int offset in item.shape)
         {
-            Vector2Int cell = anchorPos + offset;
+            var newOffset = offset;
+            if (isFlipped)
+            {
+                newOffset.x = -offset.x;
+            }
+            Vector2Int cell = anchorPos + newOffset;
             grid[cell.x, cell.y] = item;
         }
         item.gridPosition = anchorPos;

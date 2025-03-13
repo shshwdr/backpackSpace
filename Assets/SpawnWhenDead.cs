@@ -13,6 +13,7 @@ public class SpawnWhenDead : DeadActionBase
         var shapes = bagitem.shape;
         var go = Instantiate(prefab, bagitem.transform.position, Quaternion.identity, bagitem.transform.parent);
         bagManager.aliveBagItems.Add(go.GetComponent<BagItem>());
+        go.GetComponent<BagItem>().gridPosition = bagitem.gridPosition;
         go.GetComponent<BagItem>().isGenerated = true;
         
         // for(int i = 0;i< 2;i++)

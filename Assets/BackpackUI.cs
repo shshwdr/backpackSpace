@@ -43,6 +43,11 @@ public class BackpackUI : MonoBehaviour
     /// <returns>对应的 Image 组件，如果坐标超出范围则返回 null</returns>
     public Image GetSlotAt(Vector2Int gridPos)
     {
+        if (gridPos.x < 0 || gridPos.x >= columns || gridPos.y < 0 || gridPos.y >= rows)
+        {
+            Debug.LogWarning($"GetSlotAt: gridPos {gridPos} 超出背包范围！");
+            return null;
+        }
         // 计算对应的索引，假设格子的排列顺序与 GridLayoutGroup 的 startCorner 为 LowerLeft
         int index = gridPos.y * columns + gridPos.x;
         if (index < 0 || index >= backpackPanel.childCount)

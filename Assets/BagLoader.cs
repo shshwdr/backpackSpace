@@ -54,8 +54,8 @@ public class BagLoader : MonoBehaviour
             //bagItem.identifier = itemData.identifier;
             
             // 根据保存的格子坐标，尝试将物品放入背包中
-            Vector2Int gridPos = new Vector2Int(itemData.posX, itemData.posY);
-            bool placed = bagManager.TryPlaceItem(bagItem, gridPos);
+            Vector2Int gridPos = new Vector2Int(4-itemData.posX, itemData.posY);
+            bool placed = bagManager.TryPlaceItem(bagItem, gridPos,true);
             if (!placed)
             {
                 Debug.LogWarning("物品 " + itemData.identifier + " 在位置 " + gridPos + " 放置失败！");
@@ -79,6 +79,23 @@ public class BagLoader : MonoBehaviour
                 
                 // 如果需要与格子中心对齐，可额外加上半个 cellSize 的偏移：
                 // itemRect.anchoredPosition += new Vector2(cellSize * 0.5f, cellSize * 0.5f);
+                
+                
+                //flip
+                
+                bool hasWide = false;
+                foreach (var s in bagItem.shape)
+                {
+                    if (s.x > 0)
+                    {
+                        hasWide = true;
+                    }
+                }
+
+                if (hasWide)
+                {
+                    gridPos.x -= 1;
+                }
                 
                 // 也可以通过获取格子预制体的 Image 组件获得格子中心的 worldPosition
                 Image slotImage = backpackUI.GetSlotAt(gridPos);

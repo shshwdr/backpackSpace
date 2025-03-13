@@ -166,7 +166,7 @@ public class BattleManager : Singleton<BattleManager>
         }
         else
         {
-            waveText.text = "Wave: " + GameRoundManager.Instance.currentWave+"/"+GameRoundManager.Instance.maxWave;
+            waveText.text = "Wave\n" + GameRoundManager.Instance.currentWave+"/"+GameRoundManager.Instance.maxWave;
         }
         // 清理战斗相关资源
         
@@ -190,6 +190,9 @@ public class BattleManager : Singleton<BattleManager>
         {
             Destroy(transform.gameObject);
         }
+        
+        
+        enemyBagManager.bagItems.Clear();
         
         friendlyCurrentHP = friendlyTotalHP;
         enemyCurrentHP = enemyTotalHP;

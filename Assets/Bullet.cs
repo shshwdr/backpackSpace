@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
@@ -8,18 +9,20 @@ public class Bullet : MonoBehaviour
     private bool isFriendly;
     public float lifeTime = 5f;
     private float timer;
+    public ItemInfo info;
 
     // 为检测目标，我们需要引用对方的背包管理器和主物品区域
     // 假设在场景中存在 BattleManager，可以提供这些引用
     private BagManager targetBagManager;
     private RectTransform targetMainItemRect;
 
-    public void Initialize(Vector2 dir, float spd, int dmg, bool friendly)
+    public void Initialize(Vector2 dir, float spd, int dmg, bool friendly, ItemInfo info)
     {
         direction = dir.normalized;
         speed = spd;
         damage = dmg;
         isFriendly = friendly;
+        this.info = info;
         // 根据友军/敌方选择目标背包，假设 BattleManager 有对应方法
         if (isFriendly)
         {
@@ -30,6 +33,7 @@ public class Bullet : MonoBehaviour
         {
             targetBagManager = BattleManager.Instance.playerBagManager;
             targetMainItemRect = BattleManager.Instance.friendMainItemRect;
+            GetComponentInChildren<Image>().transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 

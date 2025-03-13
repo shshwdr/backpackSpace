@@ -16,7 +16,10 @@ public class PiercingAttack : ActionBase
       
       var go = Instantiate(bullet, worldPos, Quaternion.identity);
       Destroy(go,0.3f);
-
+      if (!bagManager.isFriendly)
+      {
+         go.transform.localScale = new Vector3(-1,1,1);
+      }
       
       
       
