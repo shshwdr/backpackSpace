@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// 背包管理器，负责创建和管理一个固定大小的背包，并提供接口进行物体放置和查询。
@@ -23,12 +25,38 @@ public class BagManager : MonoBehaviour
 
     public void StartBattle()
     {
-        aliveBagItems = bagItems;
+        aliveBagItems = bagItems.ToList();
         deadCount = 0;
+
+
     }
    public void Init()
     {
         bag = new Bag(bagWidth, bagHeight);
+    }
+
+    public void Reset()
+    {
+        bag.Reset();
+        
+        foreach (var disa in GetComponentsInChildren<DisableFront>())
+        {
+            disa.Reset();
+        }
+    }
+    public void Die()
+    {
+        foreach (var item in aliveBagItems)
+        {
+                if (item.info.identifier == "revenge")
+                {
+                    var position =
+                        GameRoundManager.GetWorldPosition(item.GetComponentInChildren<Image>()
+                            .GetComponent<RectTransform>());
+                    var go = Instantiate(BattleManager.Instance.ghostEffect, position, Quaternion.identity);
+                    Destroy(go, 1);
+                }
+        }
     }
 
     /// <summary>

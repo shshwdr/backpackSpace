@@ -4,6 +4,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class BattleManager : Singleton<BattleManager>
 {
@@ -24,7 +25,15 @@ public class BattleManager : Singleton<BattleManager>
     public bool isBattling = false;
 
     public TMP_Text waveText;
+    public GameObject ghostEffect;
 
+    public GameObject battleCanvas;
+    public Button speedButton;
+
+    private int speedIndex = 0;
+    List<int>  speedList = new List<int>() { 1, 2, 4 };
+    
+    
 
     public void ApplyDamageToMainItem(BagManager bagManager,int dmg)
     {
@@ -52,6 +61,18 @@ public class BattleManager : Singleton<BattleManager>
 
         friendMainItemRect = playerBagManager.mainItem;
         enemyMainItemRect = enemyBagManager.mainItem;
+        speedButton.onClick.AddListener(() =>
+            {
+                speedIndex++;
+                if (speedIndex >= speedList.Count)
+                {
+                    speedIndex = 0;
+                }
+
+                speedButton.GetComponentInChildren<TMP_Text>().text = "x" + speedList[speedIndex].ToString();
+                Time.timeScale = speedList[speedIndex];
+            }
+        );
         //bagLoader.LoadRandomBagDataFromWave(wave);
     }
 
@@ -73,6 +94,8 @@ public class BattleManager : Singleton<BattleManager>
 
     public void StartBattle()
     {
+        battleCanvas.SetActive(true);
+        Captain.Instance.SetNormal();
         BagData currentBagData = new BagData()
         {
             wave = GameRoundManager.Instance.CurrentWave,
@@ -89,7 +112,8 @@ public class BattleManager : Singleton<BattleManager>
             {
                 identifier = item.identifier,
                 posX = item.gridPosition.x,
-                posY = item.gridPosition.y
+                posY = item.gridPosition.y,
+                level = item.level,
             });
         }
         currentBagData.items = itemsData;
@@ -152,12 +176,24 @@ public class BattleManager : Singleton<BattleManager>
             GameRoundManager.Instance.ReduceHP();
             //GameRoundManager.Instance.GameLose();
         }
+
+        if (isWin)
+        {
+            
+            Captain.Instance.SetHappy();
+        }
+        else
+        {
+            Captain.Instance.SetSad();
+        }
         // 清理战斗相关资源
         CLearBattle();
     }
     
     public void CLearBattle()
     {
+        
+        battleCanvas.SetActive(false);
         isBattling = false;
         GameRoundManager.Instance.currentWave++;
         if (GameRoundManager.Instance.currentWave > GameRoundManager.Instance.maxWave)
@@ -190,8 +226,9 @@ public class BattleManager : Singleton<BattleManager>
         {
             Destroy(transform.gameObject);
         }
-        
-        
+
+        enemyBagManager.Reset();
+         playerBagManager.Reset();
         enemyBagManager.bagItems.Clear();
         
         friendlyCurrentHP = friendlyTotalHP;

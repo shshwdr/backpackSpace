@@ -21,6 +21,7 @@ public class WinLoseMenu : MenuBase
         Show();
 
         text.text = " You Win!";
+        Captain.Instance.SetHappy();
     }
     
     public void ShowLose()
@@ -28,5 +29,6 @@ public class WinLoseMenu : MenuBase
         Show();
 
         text.text = " You Lose!";
+        Captain.Instance.SetSad();
     }
 }

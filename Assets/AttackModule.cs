@@ -10,6 +10,11 @@ public class AttackModule : ActionBase
    override protected void Fire()
     {
         base.Fire();
+        
+        if (bagitem.isDisabled)
+        {
+            return;
+        }
         // 从武器位置实例化子弹
         GameObject bulletGO = Instantiate(bulletPrefab, transform.position, Quaternion.identity,BattleManager.Instance.bulletParent);
         Bullet bullet = bulletGO.GetComponent<Bullet>();

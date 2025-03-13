@@ -4,64 +4,371 @@
             "wave": 1,
             "items": [
                 {
-                    "identifier": "drone",
+                    "identifier": "target",
                     "posX": 0,
-                    "posY": 2
+                    "posY": 1,
+                    "level": 0
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 0
+                },
+                {
+                    "identifier": "target",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 0
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 0
+                },
+                {
+                    "identifier": "target",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 0
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 0
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 0
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 4,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 0
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 0
+                },
+                {
+                    "identifier": "target",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 0
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 0
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 0
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 0
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 0
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 0
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 0
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 0
                 },
                 {
                     "identifier": "earth",
                     "posX": 2,
-                    "posY": 2
+                    "posY": 1,
+                    "level": 0
                 }
             ]
         },
         {
-            "wave": 1,
-            "items": [
-                {
-                    "identifier": "trade",
-                    "posX": 0,
-                    "posY": 2
-                },
-                {
-                    "identifier": "defender",
-                    "posX": 3,
-                    "posY": 3
-                }
-            ]
-        },
-        {
-            "wave": 1,
-            "items": [
-                {
-                    "identifier": "trade",
-                    "posX": 0,
-                    "posY": 3
-                },
-                {
-                    "identifier": "bear",
-                    "posX": 2,
-                    "posY": 2
-                }
-            ]
-        },
-        {
-            "wave": 1,
+            "wave": 2,
             "items": [
                 {
                     "identifier": "collect",
                     "posX": 0,
-                    "posY": 0
+                    "posY": 3,
+                    "level": 0
                 },
                 {
-                    "identifier": "defender",
+                    "identifier": "drone",
                     "posX": 0,
-                    "posY": 2
-                },
+                    "posY": 4,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
                 {
                     "identifier": "bear",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 4,
+            "items": []
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 0
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 0,
+                    "posY": 4,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 0
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 0
+                },
+                {
+                    "identifier": "earth",
                     "posX": 3,
-                    "posY": 1
+                    "posY": 3,
+                    "level": 0
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 1,
+                    "level": 0
                 }
             ]
         },
@@ -69,39 +376,85 @@
             "wave": 1,
             "items": [
                 {
-                    "identifier": "collect",
-                    "posX": 0,
-                    "posY": 1
+                    "identifier": "target",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 0
                 },
                 {
-                    "identifier": "bear",
+                    "identifier": "heal",
                     "posX": 2,
-                    "posY": 2
-                },
-                {
-                    "identifier": "defender",
-                    "posX": 3,
-                    "posY": 0
+                    "posY": 3,
+                    "level": 0
                 }
             ]
         },
         {
-            "wave": 1,
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 0
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 0,
+                    "posY": 4,
+                    "level": 0
+                },
+                {
+                    "identifier": "target",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 0
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 0
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 0
+                }
+            ]
+        },
+        {
+            "wave": 4,
             "items": [
                 {
                     "identifier": "trade",
                     "posX": 1,
-                    "posY": 3
+                    "posY": 0,
+                    "level": 0
                 },
                 {
-                    "identifier": "collect",
-                    "posX": 3,
-                    "posY": 0
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 0
                 },
                 {
-                    "identifier": "bear",
+                    "identifier": "ship",
                     "posX": 3,
-                    "posY": 2
+                    "posY": 2,
+                    "level": 0
                 }
             ]
         }

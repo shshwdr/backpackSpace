@@ -8,6 +8,11 @@ public class PiercingAttack : ActionBase
    protected override void Fire()
    {
       base.Fire();
+      
+      if (bagitem.isDisabled)
+      {
+         return;
+      }
       var enemyBagManager = BattleManager.Instance.getEnemyBagManager(bagManager);
       var hit = false;
       HashSet<BagItem> hitItems = new HashSet<BagItem>();

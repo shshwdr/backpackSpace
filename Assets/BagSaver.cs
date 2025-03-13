@@ -98,7 +98,8 @@ public static class BagSaver
             BagItemData itemB = b.items[i];
             if (itemA.identifier != itemB.identifier ||
                 itemA.posX != itemB.posX ||
-                itemA.posY != itemB.posY)
+                itemA.posY != itemB.posY ||
+                 itemA.level != itemB.level)
             {
                 return false;
             }

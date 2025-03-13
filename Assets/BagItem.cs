@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Pool;
 using TMPro;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -19,6 +18,7 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     public Vector2Int gridPosition = new Vector2Int(-1, -1);
     
     public string identifier;
+    public GameObject upgrade;
     
     public int maxHP = 5;
     public int currentHP;
@@ -31,12 +31,33 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     public bool isOwned = true;
     public GameObject costLabel;
 
+    public int level;
+
     public bool isGenerated = false;
 
-    private ItemInfo info;
+    public ItemInfo info;
 
     public Image flipImage;
 
+    public bool isDisabled = false;
+    public Vector3 WorldPos =>
+        GameRoundManager.GetWorldPosition(GetComponentInChildren<Image>().GetComponent<RectTransform>());
+
+    public void SetLevel(int level)
+    {
+        this.level = level;
+        maxHP = info.hp + info.hp * (level-1)/2;
+        currentHP = maxHP;
+        
+        hpbar = GetComponentInChildren<HPBar>();
+        hpbar.SetHP(currentHP, maxHP);
+    }
+
+    public void Upgrade()
+    {
+        level++;
+        SetLevel(level);
+    }
     void Awake()
     {
         info = CSVLoader.Instance.ItemInfoDict[identifier];
@@ -142,6 +163,9 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
              hpbar.SetHP(currentHP,maxHP);
          }
     }
+
+    
+    
     public void TakeDamage(int dmg)
     {
         if (dmg <= 0)
@@ -202,7 +226,10 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
                     GameRoundManager.Instance.AddGold(1);
                 }
             }
+            
         }
+
+        bagManager.Die();
     }
 
     void RemoveFromBattlefield()
@@ -223,5 +250,6 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
         gameObject.SetActive(true);
         currentHP = maxHP;
         hpbar.SetHP(currentHP,maxHP);
+        isDisabled = false;
     }
 }

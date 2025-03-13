@@ -8,6 +8,7 @@ public class BagItemData
     public string identifier; // 物体标识符
     public int posX;          // 格子坐标X
     public int posY;          // 格子坐标Y
+    public int level;
 }
 
 [Serializable]

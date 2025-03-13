@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -45,6 +46,7 @@ public class BagLoader : MonoBehaviour
             var bagItemPrefab = Resources.Load("SpaceShip/"+itemData.identifier) as GameObject;
             GameObject itemGO = Instantiate(bagItemPrefab, placeParent);
             BagItem bagItem = itemGO.GetComponent<BagItem>();
+            bagItem.SetLevel(math.max(1, itemData.level));
             if (bagItem == null)
             {
                 Debug.LogError("预制体上没有找到 BagItem 组件！");

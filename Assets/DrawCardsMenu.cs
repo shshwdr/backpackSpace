@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DrawCardsMenu : MenuBase
 {
@@ -10,17 +11,20 @@ public class DrawCardsMenu : MenuBase
     public RectTransform discardArea;
 
     public GameObject detailObj;
+
+    public Button refreshButton;
     // Start is called before the first frame update
     void Start()
     {
-        
+        refreshButton.onClick.AddListener(Refresh);
     }
     
     
     public void Refresh()
     {
-        GameRoundManager.Instance.SpendGold(2);
-        GameRoundManager.Instance.DoTrade();
+        GameRoundManager.Instance.SpendGold(1);
+        //GameRoundManager.Instance.DoTrade();
+        Show();
     }
 
     // Update is called once per frame
@@ -41,7 +45,7 @@ public class DrawCardsMenu : MenuBase
         
         for(int i = 0;i<3;i++)
         {
-            var info = all.PickItem();
+            var info = all.RandomItem();
             var prefab = Resources.Load<GameObject>("SpaceShip/" + info.identifier);
              GameObject newGo = Instantiate(prefab, parent);
              newGo.AddComponent<BagItemDragHandler>();

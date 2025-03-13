@@ -11,6 +11,10 @@ public class Bag
     // grid[x,y] 为 null 表示空格，否则为占用该格子的物体
     private BagItem[,] grid;
 
+    public void Reset()
+    {
+        grid = new BagItem[width, height];
+    }
     public Bag(int width, int height)
     {
         this.width = width;
@@ -18,6 +22,17 @@ public class Bag
         grid = new BagItem[width, height];
     }
 
+    public BagItem CanMerge(BagItem item, Vector2Int anchorPos)
+    {
+        Vector2Int cell = anchorPos ;
+        // 检查是否超出边界
+        if (cell.x < 0 || cell.x >= width || cell.y < 0 || cell.y >= height)
+            return null;
+        // 检查该格子是否已被占用
+        if (grid[cell.x, cell.y] != null && grid[cell.x, cell.y].identifier == item.identifier)
+            return grid[cell.x, cell.y] ;
+        return null;
+    }
     /// <summary>
     /// 检查物体是否能以指定的锚点放置在背包中。
     /// 物体的 shape 是一个相对位置列表（锚点为 (0,0)）。
