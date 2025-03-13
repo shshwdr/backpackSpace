@@ -47,8 +47,28 @@ public class GameRoundManager : Singleton<GameRoundManager>
     private StateType currentState = StateType.start;
 
     public TMP_Text goldLabel;
+    public bool infiniteGold = true;
+    
+    public static Vector3 GetWorldPosition(RectTransform rect)
+    {
+        
+        // Vector3 uiWorldPos = position;
+        // uiWorldPos.z = 0;
+      
+        Camera canvasCamera = Camera.main;
+
+// 如果你想转换 uiRect 的屏幕坐标到世界坐标：
+        Vector2 screenPos = rect.transform.position;//RectTransformUtility.WorldToScreenPoint(canvasCamera, transform.position);
+        Vector3 worldPos;
+        RectTransformUtility.ScreenPointToWorldPointInRectangle(rect, screenPos, canvasCamera, out worldPos);
+        return worldPos;
+    }
     public bool hasEnoughGold(int value)
     {
+        if (infiniteGold)
+        {
+            return true;
+        }
          return gold >= value;
     }
     public void AddGold(int value)

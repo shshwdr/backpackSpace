@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class PiercingAttack : ActionBase
 {
+   public GameObject bullet;
    protected override void Fire()
    {
       base.Fire();
       var enemyBagManager = BattleManager.Instance.getEnemyBagManager(bagManager);
       var hit = false;
       HashSet<BagItem> hitItems = new HashSet<BagItem>();
+
+      var worldPos = GetWorldPosition();
+      
+      var go = Instantiate(bullet, worldPos, Quaternion.identity);
+      Destroy(go,0.3f);
+
+      
+      
+      
       for (int i = 0; i < 5; i++)
       {
          var gridPos = new Vector2Int(i, bagitem.gridPosition.y);
@@ -30,4 +40,6 @@ public class PiercingAttack : ActionBase
       }
       
    }
+   
+   
 }

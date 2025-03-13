@@ -28,11 +28,13 @@ public class BagItem : MonoBehaviour
     public GameObject costLabel;
 
     public bool isGenerated = false;
-    
-    
+
+    private ItemInfo info;
 
     void Awake()
     {
+        info = CSVLoader.Instance.ItemInfoDict[identifier];
+        maxHP = info.hp;
         currentHP = maxHP;
         hpbar = GetComponentInChildren<HPBar>();
         bagManager = GetComponentInParent<BagManager>();
@@ -134,6 +136,11 @@ public class BagItem : MonoBehaviour
 
     void die()
     {
+        if (isDead)
+        {
+            return;
+        }
+        isDead = true;
         bagManager.deadCount++;
         
         if (GetComponent<DeadActionBase>())

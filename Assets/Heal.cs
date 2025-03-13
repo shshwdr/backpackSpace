@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Heal : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class Heal : MonoBehaviour
 
     private BagItem bagitem;
     ItemInfo itemInfo;
+    public GameObject healEffect;
+    
     private void Awake()
     {
         bagManager = GetComponentInParent<BagManager>();
@@ -49,6 +53,8 @@ public class Heal : MonoBehaviour
             {
                 var target = candidates.RandomItem();
                 target.Heal(itemInfo.hit);
+               var go = Instantiate(healEffect, GameRoundManager. GetWorldPosition(target.GetComponentInChildren<Image>().GetComponent<RectTransform>()), Quaternion.identity);
+                Destroy(go,1);
             }
 
             

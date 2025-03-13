@@ -14,6 +14,8 @@ public class ItemInfo
     public int cost;
     public int hit;
     public float cooldown;
+    public bool allfinished;
+
 
 
 }

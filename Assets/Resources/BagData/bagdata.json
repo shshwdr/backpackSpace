@@ -114,6 +114,246 @@
                     "posY": 3
                 }
             ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 1,
+                    "posY": 3
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 1,
+                    "posY": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 3
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 3
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 3
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 3
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 1,
+                    "posY": 3
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 0
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 2
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 4
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 3
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 3
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 1
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 0
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 1
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 0
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 2
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 0
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 4
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 2
+                }
+            ]
         }
     ]
 }

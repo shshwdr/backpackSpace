@@ -12,12 +12,31 @@ public class ActionBase : MonoBehaviour
     protected ItemInfo itemInfo;
     protected BagManager bagManager;
 
+
+    public Vector3 GetWorldPosition()
+    {
+        return GameRoundManager.GetWorldPosition(GetComponent<RectTransform>());
+        Vector3 uiWorldPos = transform.position;
+        uiWorldPos.z = 0;
+      
+        Camera canvasCamera = Camera.main;
+
+// 如果你想转换 uiRect 的屏幕坐标到世界坐标：
+        Vector2 screenPos = transform.position;//RectTransformUtility.WorldToScreenPoint(canvasCamera, transform.position);
+        Vector3 worldPos;
+        RectTransformUtility.ScreenPointToWorldPointInRectangle(GetComponent<RectTransform>(), screenPos, canvasCamera, out worldPos);
+        return worldPos;
+    }
     private void Awake()
     {
         bagManager = GetComponentInParent<BagManager>();
-        if (GetComponentInParent<BagManager>())
+        if (bagManager == null)
         {
-            isFriendly =  GetComponentInParent<BagManager>().isFriendly;
+            bagManager = BattleManager.Instance.playerBagManager;
+        }
+        if (bagManager)
+        {
+            isFriendly =  bagManager.isFriendly;
             
         }
         bagitem = GetComponentInParent<BagItem>();

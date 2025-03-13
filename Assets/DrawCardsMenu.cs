@@ -37,10 +37,13 @@ public class DrawCardsMenu : MenuBase
             Destroy(trans.gameObject);
         }
 
-        var all = Resources.LoadAll<GameObject>("SpaceShip").ToList();
-        for(int i = 0;i<4;i++)
+        var all = CSVLoader.Instance.ItemInfoDict.Values.Where(x=>x.allfinished).ToList();
+        
+        for(int i = 0;i<3;i++)
         {
-             GameObject newGo = Instantiate(all.PickItem(), parent);
+            var info = all.PickItem();
+            var prefab = Resources.Load<GameObject>("SpaceShip/" + info.identifier);
+             GameObject newGo = Instantiate(prefab, parent);
              newGo.AddComponent<BagItemDragHandler>();
              newGo.GetComponent<BagItem>().PlaceInShop();
         }

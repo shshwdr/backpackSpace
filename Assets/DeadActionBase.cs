@@ -16,9 +16,13 @@ public class DeadActionBase : MonoBehaviour
     private void Awake()
     {
         bagManager = GetComponentInParent<BagManager>();
-        if (GetComponentInParent<BagManager>())
+        if (bagManager == null)
         {
-            isFriendly =  GetComponentInParent<BagManager>().isFriendly;
+            bagManager = BattleManager.Instance.playerBagManager;
+        }
+        if (bagManager)
+        {
+            isFriendly =  bagManager.isFriendly;
             
         }
         bagitem = GetComponentInParent<BagItem>();

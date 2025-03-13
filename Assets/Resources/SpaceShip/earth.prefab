@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7843736375415062473, guid: bd32157ab3612b34f8c7504011f96c59, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -114,10 +118,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1661215601611292598, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -84.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1887344738017571154, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 27dbb0fe6ad242a4abfd93534186e7a4, type: 3}
+      objectReference: {fileID: 21300000, guid: 4603f9aead40b7d479fd7db8090682c0, type: 3}
     - target: {fileID: 1887344738017571154, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -214,6 +222,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6677558010588627054, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677558010588627054, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 7873571316622601815, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
       propertyPath: cost
       value: 12
@@ -279,3 +295,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023e616d53258cf47b4d849710ee349c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFriendly: 1
+  prefab: {fileID: 8693299049890903115, guid: 44bc41a085e23f544a7f1a2bd30bf4e5, type: 3}

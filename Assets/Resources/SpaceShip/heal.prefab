@@ -118,10 +118,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1661215601611292598, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -35.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1887344738017571154, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 904eedec386c866419ba50e43fc16efa, type: 3}
+      objectReference: {fileID: 21300000, guid: a866839b574e85c42a8a1c3168c2d482, type: 3}
     - target: {fileID: 1887344738017571154, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -168,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6026571633247950407, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6026571633247950407, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -232,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7873571316622601815, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
       propertyPath: shape.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7873571316622601815, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
       propertyPath: shape.Array.data[1].y
@@ -271,5 +275,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae48db8f8e3c58243b542ce0258235e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackInterval: 1.5
-  bulletDamage: 1
+  healEffect: {fileID: 339158821923109191, guid: 108ca465382c11742bd2c91fe4fdb13f, type: 3}
