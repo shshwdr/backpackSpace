@@ -10,16 +10,18 @@ public class Bullet : MonoBehaviour
     public float lifeTime = 5f;
     private float timer;
     public ItemInfo info;
+    BulletArriveBase actionBase;
 
     // 为检测目标，我们需要引用对方的背包管理器和主物品区域
     // 假设在场景中存在 BattleManager，可以提供这些引用
     private BagManager targetBagManager;
     private RectTransform targetMainItemRect;
 
-    public void Initialize(Vector2 dir, float spd, int dmg, bool friendly, ItemInfo info)
+    public void Initialize(Vector2 dir, float spd, int dmg, bool friendly, ItemInfo info, BulletArriveBase bagItem)
     {
         direction = dir.normalized;
         speed = spd;
+        this.actionBase = bagItem;
         damage = dmg;
         isFriendly = friendly;
         this.info = info;
@@ -85,6 +87,10 @@ public class Bullet : MonoBehaviour
             if (hitItem != null && !hitItem.isDead)
             {
                 hitItem.TakeDamage(damage);
+                if (actionBase)
+                {
+                    actionBase.BulletArrived(GetComponent<RectTransform>());
+                }
                 Destroy(gameObject);
                 return;
             }

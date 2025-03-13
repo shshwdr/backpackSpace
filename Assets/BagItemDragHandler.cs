@@ -134,7 +134,7 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
         var poses = GetComponent<BagItem>().shape;
 
         bool canPlaceFull = true;
-        var canPlace = bagManager.bag.CanPlaceItem(bagItem, gridPos);
+        var canPlace = bagManager.bag.CanPlaceItem(bagItem, gridPos,false);
 
         if (!canPlace)
         {

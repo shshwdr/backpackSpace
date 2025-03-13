@@ -56,10 +56,12 @@ public class BagLoader : MonoBehaviour
             // 根据保存的格子坐标，尝试将物品放入背包中
             Vector2Int gridPos = new Vector2Int(4-itemData.posX, itemData.posY);
             bool placed = bagManager.TryPlaceItem(bagItem, gridPos,true);
+            
             if (!placed)
             {
-                Debug.LogWarning("物品 " + itemData.identifier + " 在位置 " + gridPos + " 放置失败！");
+                Debug.LogError("物品 " + itemData.identifier + " 在位置 " + gridPos + " 放置失败！");
             }
+            
 
             var backpackUI = placeParent.GetComponent<BackpackUI>();
             // 获取背包面板的 RectTransform

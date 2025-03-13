@@ -22,11 +22,16 @@ public class Bag
     /// 检查物体是否能以指定的锚点放置在背包中。
     /// 物体的 shape 是一个相对位置列表（锚点为 (0,0)）。
     /// </summary>
-    public bool CanPlaceItem(BagItem item, Vector2Int anchorPos)
+    public bool CanPlaceItem(BagItem item, Vector2Int anchorPos,bool isFlipped)
     {
         foreach (Vector2Int offset in item.shape)
         {
-            Vector2Int cell = anchorPos + offset;
+            var newOffset = offset;
+            if (isFlipped)
+            {
+                newOffset.x = -offset.x;
+            }
+            Vector2Int cell = anchorPos + newOffset;
             // 检查是否超出边界
             if (cell.x < 0 || cell.x >= width || cell.y < 0 || cell.y >= height)
                 return false;
@@ -42,7 +47,7 @@ public class Bag
     /// </summary>
     public bool PlaceItem(BagItem item, Vector2Int anchorPos,bool isFlipped)
     {
-        if (!CanPlaceItem(item, anchorPos))
+        if (!CanPlaceItem(item, anchorPos,isFlipped))
             return false;
         foreach (Vector2Int offset in item.shape)
         {
