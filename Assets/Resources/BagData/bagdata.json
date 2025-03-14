@@ -4307,6 +4307,23 @@
                     "level": 1
                 }
             ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "bear",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                }
+            ]
         }
     ]
 }

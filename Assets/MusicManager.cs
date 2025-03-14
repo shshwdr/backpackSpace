@@ -21,7 +21,7 @@ public class MusicManager : Singleton<MusicManager>
     public void PlayBattleMusic()
     {
         
-        battleMusic.Play();
+        //battleMusic.Play();
 
         battleMusic.DOFade(1, 0.5f);
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,34 @@ public class Captain : Singleton<Captain>
     public Sprite smileSprite;
     
     public Image image;
+
+
+    public GameObject dialogue;
+
+    public void HideDialogue()
+    {
+        dialogue.SetActive(false);
+    }
+    public void ShowDialogue(string text,int face)
+    {
+        dialogue.SetActive(true);
+        dialogue.GetComponentInChildren<TMP_Text>().text = text;
+        switch (face)
+        {
+            case 0:
+                SetHappy();
+                break;
+            case 1:
+                SetSmile();
+                break;
+            case 2:
+                SetNormal();
+                break;
+            case 3:
+                SetSad();
+                break;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
