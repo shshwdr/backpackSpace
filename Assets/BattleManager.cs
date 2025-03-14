@@ -112,6 +112,7 @@ public class BattleManager : Singleton<BattleManager>
     public TMP_Text timeLabel;
     public void StartBattle()
     {
+        MusicManager.Instance.PlayBattleMusic();
         battleCanvas.SetActive(true);
         Captain.Instance.SetNormal();
         BagData currentBagData = new BagData()
@@ -221,6 +222,7 @@ public class BattleManager : Singleton<BattleManager>
     public void CLearBattle()
     {
         
+        MusicManager.Instance.StopBattleMusic();
         battleCanvas.SetActive(false);
         isBattling = false;
         GameRoundManager.Instance.currentWave++;

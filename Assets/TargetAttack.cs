@@ -29,7 +29,7 @@ public class TargetAttack : ActionBase
         BagItem target = null;
         foreach (var bagItem in enemyBagManager.aliveBagItems)
         {
-            if (bagitem.currentHP < minHP)
+            if (bagItem.currentHP < minHP)
             {
                 minHP = bagitem.currentHP;
                 target = bagItem;
