@@ -11,10 +11,10 @@ PrefabInstance:
     - target: {fileID: 150188253690352484, guid: 135c942f318c94b4c99b5fd20a211b3a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d125fe5174a929f4fbf8b832ba5825f8, type: 3}
+      objectReference: {fileID: 21300000, guid: b211585cbca9cc5488459d3f144fbfb0, type: 3}
     - target: {fileID: 1501133851784089967, guid: 135c942f318c94b4c99b5fd20a211b3a, type: 3}
       propertyPath: m_Name
-      value: redBullet
+      value: yellowBullet
       objectReference: {fileID: 0}
     - target: {fileID: 2460195407562844608, guid: 135c942f318c94b4c99b5fd20a211b3a, type: 3}
       propertyPath: m_Pivot.x

@@ -53,6 +53,8 @@ public class Heal : MonoBehaviour
             {
                 var target = candidates.RandomItem();
                 target.Heal(itemInfo.hit);
+                
+                SFXManager.Instance.PlaySFX("ChilliJam_Space_Ship_Health");
                var go = Instantiate(healEffect, GameRoundManager. GetWorldPosition(target.GetComponentInChildren<Image>().GetComponent<RectTransform>()), Quaternion.identity);
                if (target.shape.Count > 1)
                {

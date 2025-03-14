@@ -9,6 +9,14 @@ public class AttackModule : ActionBase
 
    override protected void Fire()
     {
+        if (bagitem.shape.Count > 2)
+        {
+            SFXManager.Instance.PlaySFX("ChilliJam_Space_Ship_Attack_Big");
+        }
+        else
+        {
+            SFXManager.Instance.PlaySFX("ChilliJam_Space_Ship_Attack_Small");
+        }
         base.Fire();
         
         if (bagitem.isDisabled)

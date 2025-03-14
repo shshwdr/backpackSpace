@@ -191,6 +191,8 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
         {
             return;
         }
+        
+        SFXManager.Instance.PlaySFX("ChilliJam_Space_Ship_GetHit");
         if (identifier != "defender")
         {
             foreach (var item in bagManager.bagItems)
@@ -224,6 +226,12 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
         if (isDead)
         {
             return;
+        }
+        SFXManager.Instance.PlaySFX("ChilliJam_Space_Ship_Destroy_small");
+        if (shape.Count > 2)
+        {
+            
+           
         }
         
         if (explodeEffect)

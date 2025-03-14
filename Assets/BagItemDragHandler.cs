@@ -249,12 +249,16 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
 
                     transform.parent = backpackUI.transform;
                     rectTransform.position = slotImage.transform.position - new Vector3(cellSizeTest, cellSizeTest);
+                    SFXManager.Instance.PlaySFX("ChilliJam_Space_UI_PlaceShip");
+                    
                 }
                 else
                 {
                     // 放置失败还原
                     rectTransform.anchoredPosition = originalPosition;
                     transform.parent = parent;
+                    SFXManager.Instance.PlaySFX("ChilliJam_Space_Ship_CantPlace");
+                    
                 }
             }
 

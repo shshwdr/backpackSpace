@@ -112,6 +112,8 @@ public class BattleManager : Singleton<BattleManager>
     public TMP_Text timeLabel;
     public void StartBattle()
     {
+        SFXManager.Instance.PlaySFX("ChilliJam_Space_UI_StartBottum");
+        
         MusicManager.Instance.PlayBattleMusic();
         battleCanvas.SetActive(true);
         Captain.Instance.SetNormal();
@@ -159,6 +161,7 @@ public class BattleManager : Singleton<BattleManager>
 
     public void ApplyDamageToEnemy(int dmg)
     {
+        SFXManager.Instance.PlaySFX("ChilliJam_Space_Ship_Attack_Small");
         enemyCurrentHP -= dmg;
         if (enemyCurrentHP <= 0)
         {
@@ -172,6 +175,8 @@ public class BattleManager : Singleton<BattleManager>
 
     public void ApplyDamageToFriendly(int dmg)
     {
+        
+        SFXManager.Instance.PlaySFX("ChilliJam_Space_Ship_Attack_Small");
         friendlyCurrentHP -= dmg;
         if (friendlyCurrentHP <= 0)
         {
@@ -188,11 +193,15 @@ public class BattleManager : Singleton<BattleManager>
         winLoseCanvas.DOFade(1, 2f).SetLoops(2, LoopType.Yoyo);
         if (isWin)
         {
+            
+            SFXManager.Instance.PlaySFX("ChilliJam_Space_Wave_Win");
             winLoseCanvas.GetComponentInChildren<TMP_Text>().text = "WIN!";
             //GameRoundManager.Instance.GameWin();
         }
         else
         {
+            
+            SFXManager.Instance.PlaySFX("ChilliJam_Space_Wave_Loose");
             if (currentTimer <= 0)
             {
                 winLoseCanvas.GetComponentInChildren<TMP_Text>().text = "Time Out!";

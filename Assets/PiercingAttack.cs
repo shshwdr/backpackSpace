@@ -7,6 +7,8 @@ public class PiercingAttack : ActionBase
    public GameObject bullet;
    protected override void Fire()
    {
+      
+      SFXManager.Instance.PlaySFX("ChilliJam_Space_Ship_Laser");
       base.Fire();
       
       if (bagitem.isDisabled)

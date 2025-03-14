@@ -80,6 +80,8 @@ public class ActionBase : MonoBehaviour
 
     protected virtual void Fire()
     {
+        
+        
         bagitem.ActionAnim();
     }
 }
