@@ -4324,6 +4324,23 @@
                     "level": 1
                 }
             ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 1
+                }
+            ]
         }
     ]
 }
