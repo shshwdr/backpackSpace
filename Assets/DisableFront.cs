@@ -35,13 +35,13 @@ public class DisableFront : MonoBehaviour
         var enemyBagManager =
             BattleManager.Instance.getEnemyBagManager(bagManager);
         bool isPlayer = bagManager.isFriendly;
-        // if (isPlayer)
-        // {
-        //     i = 4;
-        //     step = -1;
-        //     target = 0;
-        //
-        // }
+        if (!isPlayer)
+        {
+            i = 4;
+            step = -1;
+            target = 0;
+        
+        }
 
 
         while (i != target)
@@ -61,6 +61,10 @@ public class DisableFront : MonoBehaviour
                     {
                         var pos = hitItem.WorldPos;
                         var effect = Instantiate(effectPrefab, pos, Quaternion.identity);
+                        if (hitItem.shape.Count > 1)
+                        {
+                             effect.transform.localScale = new Vector3(1.5f, 1.5f, 1);
+                        }
                         disableTarget.Add(hitItem.gameObject);
                         effects.Add(effect);
                         
@@ -83,6 +87,11 @@ public class DisableFront : MonoBehaviour
                         var effect = Instantiate(effectPrefab, pos, Quaternion.identity);
                         disableTarget.Add(hitItem.gameObject);
                         effects.Add(effect);
+                        
+                        if (hitItem.shape.Count > 1)
+                        {
+                            effect.transform.localScale = new Vector3(1.5f, 1.5f, 1);
+                        }
                         hitItem.isDisabled = true;
                     }
                     found = true;

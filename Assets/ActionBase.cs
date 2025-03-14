@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
+using UnityEngine.UI;
 
 public class ActionBase : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class ActionBase : MonoBehaviour
     protected BagItem bagitem;
     protected ItemInfo itemInfo;
     protected BagManager bagManager;
+
+    public GameObject actionValueGO;
 
 
     public Vector3 GetWorldPosition()
@@ -45,24 +49,37 @@ public class ActionBase : MonoBehaviour
     
     void Update()
     {
+        
+        var value = itemInfo.hit;
+        if (bagitem.identifier == "revenge")
+        {
+            value += bagManager.deadCount;
+        }
+        bagitem.attackLabel.text = value.ToString();
+        
         if (GameRoundManager.Instance.isBattling)
         {
             BattleUpdate(Time.deltaTime);
         }
     }
 
+    
     void BattleUpdate(float time)
     {
+        
+        
         timer += time;
         if (timer >= itemInfo.cooldown)
         {
             timer = 0f;
             Fire();
         }
+        
+        
     }
 
     protected virtual void Fire()
     {
-        
+        bagitem.ActionAnim();
     }
 }

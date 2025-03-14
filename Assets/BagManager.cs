@@ -37,7 +37,11 @@ public class BagManager : MonoBehaviour
 
     public void Reset()
     {
-        bag.Reset();
+        if (!isFriendly)
+        {
+            
+            bag.Reset();
+        }
         
         foreach (var disa in GetComponentsInChildren<DisableFront>())
         {

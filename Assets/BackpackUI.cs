@@ -36,6 +36,14 @@ public class BackpackUI : MonoBehaviour
         }
     }
 
+    public void ClearSlotColor()
+    {
+        for (int i = 0; i < backpackPanel.childCount; i++)
+        {
+            backpackPanel.GetChild(i).GetComponent<Image>().color = new Color(1, 1, 1, 0.2f);
+        }
+    }
+
     /// <summary>
     /// 根据格子坐标返回对应的背包格子 Image 组件
     /// </summary>

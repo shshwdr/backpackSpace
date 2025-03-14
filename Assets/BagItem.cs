@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using Pool;
 using TMPro;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     
     public string identifier;
     public GameObject upgrade;
+    public TMP_Text attackLabel;
     
     public int maxHP = 5;
     public int currentHP;
@@ -43,6 +45,10 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     public Vector3 WorldPos =>
         GameRoundManager.GetWorldPosition(GetComponentInChildren<Image>().GetComponent<RectTransform>());
 
+    public void ActionAnim()
+    {
+        GetComponentInChildren<Image>().transform.DOShakePosition(0.2f, 10f, 10, 90, false, false);
+    }
     public void SetLevel(int level)
     {
         this.level = level;
@@ -62,6 +68,7 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     {
         info = CSVLoader.Instance.ItemInfoDict[identifier];
         maxHP = info.hp;
+        level = 1;
         currentHP = maxHP;
         cost = info.cost;
         hpbar = GetComponentInChildren<HPBar>();

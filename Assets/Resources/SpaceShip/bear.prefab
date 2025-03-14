@@ -8,17 +8,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1671935572936243211}
     m_Modifications:
-    - target: {fileID: 5999465712379606689, guid: bd32157ab3612b34f8c7504011f96c59, type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 5088142964902089620, guid: 381ee405a31f969469d521edff87c676, type: 3}
     - target: {fileID: 6148935577431313890, guid: bd32157ab3612b34f8c7504011f96c59, type: 3}
       propertyPath: m_Name
       value: gun
-      objectReference: {fileID: 0}
-    - target: {fileID: 6148935577431313890, guid: bd32157ab3612b34f8c7504011f96c59, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6384617109552794207, guid: bd32157ab3612b34f8c7504011f96c59, type: 3}
       propertyPath: m_Pivot.x
@@ -100,17 +92,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7843736375415062473, guid: bd32157ab3612b34f8c7504011f96c59, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6148935577431313890, guid: bd32157ab3612b34f8c7504011f96c59, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3763118564675744315}
+      addedObject: {fileID: 3192962364690380507}
   m_SourcePrefab: {fileID: 100100000, guid: bd32157ab3612b34f8c7504011f96c59, type: 3}
 --- !u!224 &4645933462411407200 stripped
 RectTransform:
@@ -122,7 +110,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6148935577431313890, guid: bd32157ab3612b34f8c7504011f96c59, type: 3}
   m_PrefabInstance: {fileID: 1793308625119700287}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3763118564675744315
+--- !u!114 &3192962364690380507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriendly: 1
+  actionValueGO: {fileID: 0}
   effect: {fileID: 5743592029397019531, guid: fe2b32a651fdeef4e98fcdeca5bf7750, type: 3}
 --- !u!1001 &4940807730182270540
 PrefabInstance:
@@ -144,6 +133,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1338364333776874949, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661215601611292598, guid: 8a505858e9bac42428897f8c0336cfd8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -4.8

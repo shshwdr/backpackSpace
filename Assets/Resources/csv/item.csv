@@ -1,13 +1,13 @@
-﻿identifier,hp,hit,cooldown,cost,size,hitAdjust,ability,desc,name,story,functionFinished,artFinished,allfinished,tested
-bear,20,1,1.7,9,3,1,0.871459695,Damage first item infont of it {0} every {1} second and heal self,Water Bear,,,Tardigress,1,1
-drone,7,1,1.6,5,1,1,1.75,Do Piercing damage {0} every {1} second.Can only reach main ship when no unit in front of it,Borg Cube,,1,Skyhopper,1,1
-earth,15,2,1.3,10,4,1,0.865384615,"When destroyed, spawn some spaceship.Damage {0} every {1} second.",Wandering Earth,"The Wandering Home is an extension of the Canis Majorion’s home planet. It was built during a planetorial crisis that threatened the existence of the friendly dog alien's home planet. This enormous ship has its very own ecosystem built within that can sustain its inhabitants for millennia to come. Equipped with extra spaceships within, this spacecraft aims to maximize the chance of survival of any inhabitants on board. ",1,Emerald Rounder,1,1
-heal,10,1,1.1,7,1,0,1.298701299,Heal random ally {0} hp every {1} second.,Skutters,,1,Skitter,1,1
-ship,10,1,1,5,2,0,1,Damage first item infont of it {0} every {1} second.,SpaceShip,,1,ship,1,1
-tardis,6,0,1.5,10,2,5,1,Disable the attack of first item infront of it.,Tardis,,,tardis,1,1
-collect,10,0,1,10,1,1,1,Get 1 coin for each enemy the team destroyed.  No damage.,WALL-E,,1,,1,1
-trade,13,1,1.1,10,2,1,1.181818182,"When you buy and sell spaceship,  get 1 coin. Damage first item infont of it {0} every {1} second.",#^$$$^??_(`￥,"The #^$$$^??_(`￥ is a mysterious vessel occupied by the nicknamed Blorbo race. No one within this galaxy is quite capable of pronouncing the original name of this species. They seem to be a travelling merchant species that communicate through drawings. Hence,  #^$$$^??_(`￥always prefer trase than fight. But it doesn't mean that it's incapable if the situation calls for a fight. ",1,#^$$$^__’¥,1,1
-revenge,6,1,1.4,8,1,1,1.071428571,Damage first item infont of it {0} every {1} second. Damage+1 for each ally get destroyed. ,Battle Avenger,,1,Hermit Crab-Class Explorer,1,1
-target,11,2,2,8,2,1,1.03125,Target the one with lowest hp and damage {0} every {1} second.,Culture Drone,,,DRILL- SR158,1,1
-defender,25,0,1,10,3,1,0.833333333,"For each damage received by allied units, it absorbs 1 point. No damage.",The Steel Defender,,,The Steel Defender,1,1
-buff,10,0,2,6,,,,Any ship bettwen two ,Energy Sphere,,,Energy Sphere,,
+﻿identifier,hp,hit,cooldown,cost,size,hitAdjust,ability,desc,name,story,functionFinished,artFinished,allfinished,tested,unlockWave
+bear,20,1,1.7,9,3,1,0.871459695,Damage first item infont of it {0} every {1} second and heal self,Water Bear,,,Tardigress,1,1,1
+drone,7,1,1.6,5,1,1,1.75,Do Piercing damage {0} every {1} second.Can only reach main ship when no unit in front of it,Borg Cube,,1,Skyhopper,1,1,1
+earth,15,2,1.3,10,4,1,0.865384615,"When destroyed, spawn some spaceship.Damage {0} every {1} second.",Wandering Earth,"The Wandering Home is an extension of the Canis Majorion’s home planet. It was built during a planetorial crisis that threatened the existence of the friendly dog alien's home planet. This enormous ship has its very own ecosystem built within that can sustain its inhabitants for millennia to come. Equipped with extra spaceships within, this spacecraft aims to maximize the chance of survival of any inhabitants on board. ",1,Emerald Rounder,1,1,1
+heal,10,1,1.1,7,1,0,1.298701299,Heal random ally {0} hp every {1} second.,Skutters,,1,Skitter,1,1,1
+ship,10,1,1,5,2,0,1,Damage first item infont of it {0} every {1} second.,SpaceShip,,1,ship,1,1,1
+tardis,6,0,1.5,10,2,5,1,Disable the attack of first item infront of it.,Tardis,,,tardis,1,1,3
+collect,10,0,1,10,1,1,1,Get 1 coin for each enemy the team destroyed.  No damage.,WALL-E,,1,,1,1,2
+trade,13,1,1.1,10,2,1,1.181818182,"When you buy and sell spaceship,  get 1 coin. Damage first item infont of it {0} every {1} second.",#^$$$^??_(`￥,"The #^$$$^??_(`￥ is a mysterious vessel occupied by the nicknamed Blorbo race. No one within this galaxy is quite capable of pronouncing the original name of this species. They seem to be a travelling merchant species that communicate through drawings. Hence,  #^$$$^??_(`￥always prefer trase than fight. But it doesn't mean that it's incapable if the situation calls for a fight. ",1,#^$$$^__’¥,1,1,2
+revenge,6,1,1.4,8,1,1,1.071428571,Damage first item infont of it {0} every {1} second. Damage+1 for each ally get destroyed. ,Battle Avenger,,1,Hermit Crab-Class Explorer,1,1,2
+target,11,2,2,8,2,1,1.03125,Target the one with lowest hp and damage {0} every {1} second.,Culture Drone,,,DRILL- SR158,1,1,2
+defender,25,0,1,10,3,1,0.833333333,"For each damage received by allied units, it absorbs 1 point. No damage.",The Steel Defender,,,The Steel Defender,1,1,3
+buff,10,0,2,6,,,,Any ship bettwen two ,Energy Sphere,,,Energy Sphere,,,100000

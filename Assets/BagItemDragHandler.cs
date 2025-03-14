@@ -140,9 +140,11 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
         {
             canMerge.upgrade.SetActive(true);
             upgradePotential = canMerge;
+            bagItem.upgrade.SetActive(true);
         }
         else
         {
+            upgradePotential = null;
             var poses = GetComponent<BagItem>().shape;
 
             bool canPlaceFull = true;
@@ -211,11 +213,13 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
         if (bagItem.isOwned && IsPointerOverTarget(eventData))
         {
             bagItem.Sell();
+            Destroy(gameObject);
         }
         else
         {
             if (upgradePotential != null)
             {
+                bagItem.Purchase();
                 upgradePotential.Upgrade();
                 Destroy(gameObject);
             }
@@ -264,11 +268,12 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
 
         if (backpackUI != null)
         {
-            Image slotImage = backpackUI.GetSlotAt(gridPos);
-            if (slotImage != null)
-            {
-                slotImage.color = Color.white;
-            }
+            backpackUI.ClearSlotColor();
+            // Image slotImage = backpackUI.GetSlotAt(gridPos);
+            // if (slotImage != null)
+            // {
+            //     slotImage.color = Color.white;
+            // }
         }
 
         if (upgradePotential)
@@ -278,6 +283,7 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
 
         upgradePotential = null;
 
+        bagItem.upgrade.SetActive(false);
         discardArea.gameObject.SetActive(false);
     }
 }

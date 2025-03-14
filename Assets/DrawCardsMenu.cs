@@ -41,7 +41,7 @@ public class DrawCardsMenu : MenuBase
             Destroy(trans.gameObject);
         }
 
-        var all = CSVLoader.Instance.ItemInfoDict.Values.Where(x=>x.allfinished).ToList();
+        var all = CSVLoader.Instance.ItemInfoDict.Values.Where(x=>x.allfinished && x.unlockWave <=  GameRoundManager.Instance.CurrentWave).ToList();
         
         for(int i = 0;i<3;i++)
         {

@@ -85,6 +85,7 @@ public class GameRoundManager : Singleton<GameRoundManager>
             if (item.identifier == "trade")
             {
                 GameRoundManager.Instance.AddGold(1);
+                item.ActionAnim();
             }
         }
     }
@@ -105,7 +106,7 @@ public class GameRoundManager : Singleton<GameRoundManager>
         UpdateHP();
         
         
-        BattleManager.Instance.waveText.text = "Wave: " + GameRoundManager.Instance.currentWave+"/"+GameRoundManager.Instance.maxWave;
+        BattleManager.Instance.waveText.text = "Wave \n" + GameRoundManager.Instance.currentWave+"/"+GameRoundManager.Instance.maxWave;
         Next();
     }
 

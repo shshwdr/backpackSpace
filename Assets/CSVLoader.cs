@@ -15,6 +15,7 @@ public class ItemInfo
     public int hit;
     public float cooldown;
     public bool allfinished;
+    public int unlockWave;
 
 
 

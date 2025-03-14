@@ -17,6 +17,10 @@ public class BattleManager : Singleton<BattleManager>
     public HPBar enemyHPBar;
     private BagLoader bagLoader;
 
+    public float maxTime = 120;
+
+    public float currentTimer = 120;
+
     [HideInInspector]
     public RectTransform friendMainItemRect;
     [HideInInspector]
@@ -73,6 +77,8 @@ public class BattleManager : Singleton<BattleManager>
                 Time.timeScale = speedList[speedIndex];
             }
         );
+        battleCanvas.SetActive(false);
+        
         //bagLoader.LoadRandomBagDataFromWave(wave);
     }
 
@@ -90,8 +96,20 @@ public class BattleManager : Singleton<BattleManager>
         //         attackModule.BattleUpdate(Time.deltaTime);
         //     }
         // }
+        if (isBattling)
+        {
+            
+            currentTimer -= Time.deltaTime;
+            timeLabel.text = currentTimer.ToString("F0");
+            if (currentTimer <= 0)
+            {
+                EndBattle(false);
+            }
+            
+        }
     }
 
+    public TMP_Text timeLabel;
     public void StartBattle()
     {
         battleCanvas.SetActive(true);
@@ -123,6 +141,8 @@ public class BattleManager : Singleton<BattleManager>
         friendlyCurrentHP = friendlyTotalHP;
         
         isBattling = true;
+
+        currentTimer = maxTime;
 
     }
     
@@ -164,7 +184,7 @@ public class BattleManager : Singleton<BattleManager>
     public CanvasGroup winLoseCanvas;
     public void EndBattle(bool isWin)
     {
-        winLoseCanvas.DOFade(1, 0.5f).SetLoops(2, LoopType.Yoyo);
+        winLoseCanvas.DOFade(1, 2f).SetLoops(2, LoopType.Yoyo);
         if (isWin)
         {
             winLoseCanvas.GetComponentInChildren<TMP_Text>().text = "WIN!";
@@ -172,7 +192,15 @@ public class BattleManager : Singleton<BattleManager>
         }
         else
         {
-            winLoseCanvas.GetComponentInChildren<TMP_Text>().text = "Lose!";
+            if (currentTimer <= 0)
+            {
+                winLoseCanvas.GetComponentInChildren<TMP_Text>().text = "Time Out!";
+            }
+            else
+            {
+                
+                winLoseCanvas.GetComponentInChildren<TMP_Text>().text = "Lose!";
+            }
             GameRoundManager.Instance.ReduceHP();
             //GameRoundManager.Instance.GameLose();
         }
