@@ -134,6 +134,7 @@ public class BagItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
         if (upgradePotential && upgradePotential != canMerge)
         {
             upgradePotential.upgrade.SetActive(false);
+            bagItem.upgrade.SetActive(false);
         }
 
         if (canMerge != null)

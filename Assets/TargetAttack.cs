@@ -22,6 +22,11 @@ public class TargetAttack : ActionBase
             var pos = GameRoundManager.GetWorldPosition(enemyBagManager.mainItem.GetComponent<RectTransform>());
             var go = Instantiate(effect, pos, Quaternion.identity);
             Destroy(go,1);
+            
+            if (bagitem.shape.Count > 1)
+            {
+                go.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            }
             return;
         }
 

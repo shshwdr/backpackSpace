@@ -45,7 +45,7 @@ public class DrawCardsMenu : MenuBase
         
         for(int i = 0;i<3;i++)
         {
-            var info = all.RandomItem();
+            var info = all.PickItem();
             var prefab = Resources.Load<GameObject>("SpaceShip/" + info.identifier);
              GameObject newGo = Instantiate(prefab, parent);
              newGo.AddComponent<BagItemDragHandler>();

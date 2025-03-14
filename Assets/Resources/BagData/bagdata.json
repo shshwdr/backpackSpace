@@ -1781,6 +1781,2532 @@
                     "level": 1
                 }
             ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 4,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 0,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 4,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 2,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 5,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 2
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 0,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 6,
+            "items": [
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 2
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 0,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 7,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 3
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 0,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 4,
+                    "posY": 4,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "wave": 8,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 4
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 0,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "trade",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 4,
+                    "posY": 4,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "wave": 9,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 4
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 4
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 3
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 3
+                }
+            ]
+        },
+        {
+            "wave": 10,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 4
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 5
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 4
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 3
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 1,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 4,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 1,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 5,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 1,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 6,
+            "items": [
+                {
+                    "identifier": "heal",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 1,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 4,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 5,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "wave": 6,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 3
+                },
+                {
+                    "identifier": "target",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "wave": 7,
+            "items": [
+                {
+                    "identifier": "bear",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 3
+                },
+                {
+                    "identifier": "target",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 3
+                },
+                {
+                    "identifier": "target",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "wave": 8,
+            "items": [
+                {
+                    "identifier": "bear",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 3
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 4
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 3
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "wave": 9,
+            "items": [
+                {
+                    "identifier": "bear",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 3
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 2,
+                    "posY": 1,
+                    "level": 5
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 3
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "wave": 10,
+            "items": [
+                {
+                    "identifier": "bear",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 3
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 3
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 5
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 3
+                },
+                {
+                    "identifier": "target",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 3
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "trade",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "trade",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 1,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 4,
+            "items": [
+                {
+                    "identifier": "trade",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 2
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 1,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 5,
+            "items": [
+                {
+                    "identifier": "trade",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 3
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 1,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "wave": 6,
+            "items": [
+                {
+                    "identifier": "trade",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 3
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 1,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 1,
+                    "level": 2
+                }
+            ]
+        },
+        {
+            "wave": 7,
+            "items": [
+                {
+                    "identifier": "trade",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 5
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 1,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 4,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 8,
+            "items": [
+                {
+                    "identifier": "trade",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 4
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 6
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 1,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 4,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 9,
+            "items": [
+                {
+                    "identifier": "trade",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 3
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 4
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 8
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 1,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 4,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 10,
+            "items": [
+                {
+                    "identifier": "trade",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 3
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 4
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 1,
+                    "posY": 2,
+                    "level": 9
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 1,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 3
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 2,
+                    "posY": 3,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 3
+                },
+                {
+                    "identifier": "tardis",
+                    "posX": 4,
+                    "posY": 0,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 4,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 4,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 4,
+                    "posY": 4,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 1,
+            "items": [
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 2,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 2,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 3,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 4,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 5,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 6,
+            "items": [
+                {
+                    "identifier": "revenge",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "target",
+                    "posX": 2,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 2
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 7,
+            "items": [
+                {
+                    "identifier": "tardis",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 2
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 4
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 1
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 2
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 3
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 8,
+            "items": [
+                {
+                    "identifier": "tardis",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 2
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 5
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 2
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 3
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 3
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 9,
+            "items": [
+                {
+                    "identifier": "tardis",
+                    "posX": 0,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "ship",
+                    "posX": 0,
+                    "posY": 2,
+                    "level": 3
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 6
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 1
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 3
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 4
+                },
+                {
+                    "identifier": "collect",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 4
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "wave": 10,
+            "items": [
+                {
+                    "identifier": "tardis",
+                    "posX": 0,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "target",
+                    "posX": 0,
+                    "posY": 3,
+                    "level": 6
+                },
+                {
+                    "identifier": "revenge",
+                    "posX": 1,
+                    "posY": 0,
+                    "level": 2
+                },
+                {
+                    "identifier": "defender",
+                    "posX": 1,
+                    "posY": 3,
+                    "level": 4
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 2,
+                    "level": 4
+                },
+                {
+                    "identifier": "heal",
+                    "posX": 2,
+                    "posY": 4,
+                    "level": 1
+                },
+                {
+                    "identifier": "drone",
+                    "posX": 3,
+                    "posY": 0,
+                    "level": 4
+                },
+                {
+                    "identifier": "earth",
+                    "posX": 3,
+                    "posY": 1,
+                    "level": 2
+                },
+                {
+                    "identifier": "bear",
+                    "posX": 3,
+                    "posY": 3,
+                    "level": 1
+                }
+            ]
         }
     ]
 }

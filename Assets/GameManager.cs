@@ -19,7 +19,7 @@ public class GameManager : Singleton<GameManager>
 
     IEnumerator test()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
         
         BattleManager.Instance.LoadBagData();
         GameRoundManager.Instance.Init();

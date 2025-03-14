@@ -6,6 +6,7 @@ using UnityEngine;
 public class DetailMenu : Singleton<DetailMenu>
 {
     public TMP_Text label;
+    public TMP_Text story;
     protected override void Awake()
     {
         base.Awake();
@@ -18,5 +19,6 @@ public class DetailMenu : Singleton<DetailMenu>
         label.text = itemInfo.name + 
                      //"\n" + "HP: " + itemInfo.hp+
                      "\n" + string.Format( itemInfo.desc, itemInfo.hit, itemInfo.cooldown);
+        story.text = itemInfo.story;
     }
 }

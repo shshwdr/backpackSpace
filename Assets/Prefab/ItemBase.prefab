@@ -294,6 +294,8 @@ MonoBehaviour:
   identifier: short
   upgrade: {fileID: 2846469852022517401}
   attackLabel: {fileID: 8016631631668504222}
+  explodeEffect: {fileID: 7161360178461474766, guid: 10b9a77e2b867534794d934d92afface, type: 3}
+  upgradeEffect: {fileID: 6767964386471777013, guid: 8f304d8d049012d47831f1d469729fbc, type: 3}
   maxHP: 50
   currentHP: 0
   cost: 4

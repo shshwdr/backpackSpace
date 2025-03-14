@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFriendly: 0
   actionValueGO: {fileID: 0}
-  effect: {fileID: 7161360178461474766, guid: 10b9a77e2b867534794d934d92afface, type: 3}
+  effect: {fileID: 8863471276331628024, guid: 187779bb15e37864aa81752d5f1cf4bf, type: 3}
 --- !u!1001 &4940807730182270540
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -125,6 +125,11 @@ public class GameRoundManager : Singleton<GameRoundManager>
         }
     }
 
+    public void AddHP()
+    {
+        currentHP++;
+        UpdateHP();
+    }
     public void ReduceHP()
     {
         currentHP--;
@@ -183,7 +188,10 @@ public class GameRoundManager : Singleton<GameRoundManager>
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            AddHP();
+        }
     }
 
     public bool isFinished = false;

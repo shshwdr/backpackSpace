@@ -21,7 +21,8 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     public string identifier;
     public GameObject upgrade;
     public TMP_Text attackLabel;
-    
+    public GameObject explodeEffect;
+    public GameObject upgradeEffect;
     public int maxHP = 5;
     public int currentHP;
     public int cost = 4;
@@ -63,6 +64,17 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     {
         level++;
         SetLevel(level);
+        
+        
+        if (upgradeEffect)
+        {
+            var go = Instantiate(upgradeEffect, GameRoundManager.GetWorldPosition( GetComponentInChildren<Image>().GetComponent<RectTransform>()), Quaternion.identity);
+            Destroy(go, 1);
+            if (shape.Count > 1)
+            {
+                go.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            }
+        }
     }
     void Awake()
     {
@@ -212,6 +224,17 @@ public class BagItem : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
         if (isDead)
         {
             return;
+        }
+        
+        if (explodeEffect)
+        {
+            var go = Instantiate(explodeEffect, GameRoundManager.GetWorldPosition( GetComponentInChildren<Image>().GetComponent<RectTransform>()), Quaternion.identity);
+            Destroy(go, 1);
+            
+            if (shape.Count > 1)
+            {
+                go.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            }
         }
         isDead = true;
         bagManager.deadCount++;
